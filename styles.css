@@ -375,6 +375,78 @@
   word-break: break-all;
 }
 
+.qa-body {
+  background: #ecffea;
+}
+
+.qa-hero {
+  padding: 90px 0 40px;
+}
+
+.qa-preface {
+  padding: 30px 0 10px;
+}
+
+.qa-preface-card {
+  background: #f8f2cb;
+}
+
+.qa-toc {
+  margin: 12px 0 0 22px;
+}
+
+.qa-grid {
+  padding: 20px 0 60px;
+}
+
+.qa-grid h2 {
+  margin: 0 0 24px;
+}
+
+.qa-card {
+  background: #f8f2cb;
+  border-radius: 18px;
+  padding: 20px 24px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  margin-bottom: 20px;
+}
+
+.qa-card h3 {
+  margin: 0 0 12px;
+}
+
+.qa-answer ul,
+.qa-answer ol {
+  margin: 12px 0 12px 20px;
+}
+
+.qa-answer li {
+  margin: 6px 0;
+}
+
+.qa-figure {
+  margin: 16px 0 0;
+}
+
+.qa-final-figure {
+  margin: 24px 0 0;
+  text-align: center;
+}
+
+.qa-figure img,
+.qa-final-figure img {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+.qa-caption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
  .section-card p {
    margin: 8px 0;
  }

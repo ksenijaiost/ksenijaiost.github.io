@@ -29,6 +29,7 @@ npx serve .
 - `rules/index.html` — правила этикета.
 - `newspaper/index.html` — газета чата (выпуски).
 - `contest/index.html` — конкурсы чата.
+- `part_one/index.html` — основные вопросы про жителей.
 - `styles.css` — общий стиль для всех страниц.
 
 ## Как добавлять новые страницы гайдов
