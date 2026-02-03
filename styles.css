@@ -189,6 +189,11 @@
    margin: 8px 0 16px 20px;
  }
  
+.section-card .sublist {
+  margin-top: 10px;
+  margin-left: 32px;
+}
+
  .section-card li {
    margin: 6px 0;
  }
