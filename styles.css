@@ -9,6 +9,7 @@
    --accent: #1f7a4d;
    --accent-dark: #145a36;
    --border: #e5e7eb;
+  scroll-padding-top: 110px;
  }
  
  * {
@@ -22,6 +23,10 @@
    background: var(--bg);
    line-height: 1.6;
  }
+
+[id] {
+  scroll-margin-top: 110px;
+}
  
  a {
    color: var(--accent);
