@@ -284,6 +284,97 @@
   margin: 0;
 }
 
+.contest-body {
+  background: #d8d4eb;
+}
+
+.contest-hero {
+  background: #d8d4eb;
+  padding: 90px 0 40px;
+}
+
+.contest-hero .hero-content {
+  text-align: center;
+}
+
+.contest-intro {
+  max-width: 760px;
+  margin: 0 auto 20px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.contest-intro p {
+  margin: 12px 0;
+}
+
+.contest-nav {
+  margin: 16px 0 0 22px;
+}
+
+.contest-grid {
+  padding-top: 20px;
+}
+
+.contest-card {
+  background: #c9c2e9;
+}
+
+.contest-card-alt {
+  background: #aca0ef;
+}
+
+.contest-text p {
+  margin: 10px 0;
+}
+
+.contest-text ul {
+  margin: 12px 0 16px 20px;
+}
+
+.contest-years {
+  padding: 20px 0 80px;
+}
+
+.contest-year {
+  margin-bottom: 32px;
+}
+
+.contest-year h2 {
+  margin: 0 0 16px;
+}
+
+.contest-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.contest-item {
+  background: #c9c2e9;
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.contest-title {
+  font-weight: 700;
+}
+
+.contest-details {
+  margin: 10px 0 0 18px;
+}
+
+.contest-details li {
+  margin: 6px 0;
+}
+
+.contest-details a {
+  word-break: break-all;
+}
+
  .section-card p {
    margin: 8px 0;
  }

@@ -28,6 +28,7 @@ npx serve .
 - `terminology/index.html` — страница терминов (пример перенесённого гайда).
 - `rules/index.html` — правила этикета.
 - `newspaper/index.html` — газета чата (выпуски).
+- `contest/index.html` — конкурсы чата.
 - `styles.css` — общий стиль для всех страниц.
 
 ## Как добавлять новые страницы гайдов
