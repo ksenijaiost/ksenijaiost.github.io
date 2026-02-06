@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Гости острова</title>
+    <meta name="description" content="Описание специальных персонажей, которые приезжают на остров каждый день." />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main id="content">
+      <section class="hero hero-compact hero-centered hero-bg-qa">
+        <div class="container hero-content">
+          <p class="eyebrow">Animal Crossing New Horizon Guide</p>
+          <h1>Ой, а кто это прибыл на наш остров?</h1>
+          <p class="lead">
+            Частенько на ваш остров заезжают разные персонажи. Кто же они и что делают?
+          </p>
+          <a class="back-link" href="/">← На главную</a>
+        </div>
+      </section>
+
+      <!-- 
+        КАРТОЧКИ ПЕРСОНАЖЕЙ
+        Каждая карточка содержит: имя, подзаголовок, описание и фото
+      -->
+      <section class="container guests-list">
+        <article class="guest-card">
+          <div class="guest-body">
+            <h2>Селеста</h2>
+            <p class="guest-subtitle">Сестра Блэзерса</p>
+            <div class="guest-description">
+              <p>
+                Селеста приезжает на ваш остров в ночи, когда на небе метеоритный дождь (с 19:00 до 5:00). Если поговорить с Селестой, она даст вам рецепт из «звёздного набора» или рецепт волшебной палочки. Также, если за неделю не было метеоритного дождя, то Селеста не приедет.
+              </p>
+              <p>
+                Все гости острова могут с ней взаимодействовать.
+              </p>
+            </div>
+          </div>
+          <img
+            src="/assets/other/guests_celeste.jpg"
+            alt="Селеста"
+            loading="lazy"
+          />
+        </article>
+
+        <article class="guest-card">
+          <div class="guest-body">
+            <h2>Флик</h2>
+            <p class="guest-subtitle">Сам себя он величает энтомологом-энтузиастом</p>
+            <div class="guest-description">
+              <p>
+                Флик появляется на вашем острове для того, чтобы купить насекомых, либо же изготовить для вас модель насекомого (при условии, что за раз вы отладите ему трёх насекомых одного вида). Скупает насекомых он по наивысшей цене, так что выгоднее нести их ему, а не продавать в лавке Нука. На острове проводит весь день, с 5 утра до 5 утра. Также устраивает на вашем острове турнир «Мастер сачка».
+              </p>
+              <p>
+                В обычные дни с ним может взаимодействовать только житель острова. В турнире могут участвовать и гости.
+              </p>
+            </div>
+          </div>
+          <img
+            src="/assets/other/guests_flik.jpg"
+            alt="Флик"
+            loading="lazy"
+          />
+        </article>
+
+        <article class="guest-card">
+          <div class="guest-body">
+            <h2>Си-Джей</h2>
+            <p class="guest-subtitle">Блоггер-рыбак</p>
+            <div class="guest-description">
+              <p>
+                Также, как и Флик, занимается скупкой (только уже рыб) и созданием моделей. Скупает рыб по наивысшей цене. В отличии от Флика, он ничего не купит у вас, пока вы не выполните его просьбу поймать три рыбки.
+              </p>
+              <p>
+                В обычные дни с ним может взаимодействовать только житель острова. В турнире могут участвовать и гости.
+              </p>
+            </div>
+          </div>
+          <img
+            src="/assets/other/guests_cj.jpg"
+            alt="Си-Джей"
+            loading="lazy"
+          />
+        </article>
+
+        <article class="guest-card">
+          <div class="guest-body">
+            <h2>Гулливер</h2>
+            <p class="guest-subtitle">Чайка-пират</p>
+            <div class="guest-description">
+              <p>
+                Его вы можете найти спящим на вашем пляже. Проснувшись (а с ним нужно взаимодействовать до тех пор, пока он не проснулся), Гулливер попросит вас откопать части его поломанного коммуникатора, чтобы он мог починить его и связаться со своим кораблем. За помощь, он вознаградит вас подарком, который вы сможете обнаружить на следующий день в своём почтовом ящике. На вашем острове он проводит весь день, с 5 до 5 утра.
+              </p>
+              <p>
+                С ним может говорить только житель острова.
+              </p>
+            </div>
+          </div>
+          <img
+            src="/assets/other/guests_gulliver.jpg"
+            alt="Гулливер"
+            loading="lazy"
+          />
+        </article>
+
+        <article class="guest-card">
+          <div class="guest-body">
+            <h2>Гулливарр</h2>
+            <p class="guest-subtitle">Чайка, капитан пиратов</p>
+            <div class="guest-description">
+              <p>
+                Подобно Гулливеру, его выбрасывает на пляж и вы можете обнаружить его во время очередно прогулки по острову. Помощь Гулливарру не засчитывается в те 30 раз, которые вы должны помочь Гулливеру для получения золотой лопаты. В отличии от Гулливера, останки коммуникатора Гулливарра не засыпаны песком, а находятся в море. Чтобы собрать их, вам нужно иметь водолазный костюм.
+              </p>
+              <p>
+                С ним может говорить только житель острова.
+              </p>
+            </div>
+          </div>
+          <img
+            src="/assets/other/guests_gullivarr.jpg"
+            alt="Гулливарр"
+            loading="lazy"
+          />
+        </article>
+
+        <article class="guest-card">
+          <div class="guest-body">
+            <h2>Дейзи-Мей</h2>
+            <p class="guest-subtitle">Внучка Джоан</p>
+            <div class="guest-description">
+              <p>
+                Продаёт репу на вашем острове, идя по стопам своей бабушки, которая тоже занималась продажей репы. Появляется на острове а 05:00 и улетает в 12:00. Прилетает только по воскресеньям!
+              </p>
+              <p>
+                Взаимодействовать с ним могут все гости острова.
+              </p>
+            </div>
+          </div>
+          <img
+            src="/assets/other/guests_daisimey.jpg"
+            alt="Дейзи-Мей"
+            loading="lazy"
+          />
+        </article>
+
+        <article class="guest-card">
+          <div class="guest-body">
+            <h2>Рэдд</h2>
+            <p class="guest-subtitle">Хитрый лис</p>
+            <div class="guest-description">
+              <p>
+                Занимается нелегальной продажей предметов искусства, а также всегда старается подсунуть подделку вам под нос, так что будте внимательны.
+              </p>
+              <p>
+                Взаимодействовать с ним могут все гости острова. Купить можно только 1 предмет искусства в день.
+              </p>
+            </div>
+          </div>
+          <img
+            src="/assets/other/guests_redd.jpg"
+            alt="Рэдд"
+            loading="lazy"
+          />
+        </article>
+
+        <article class="guest-card">
+          <div class="guest-body">
+            <h2>Кикс</h2>
+            <p class="guest-subtitle">Лучший продавец обуви и акссесуаров</p>
+            <div class="guest-description">
+              <p>
+                Продаёт сумки, обувь, носки. В его ассортименте те вещи, которых вы не купите в ателье сестёр Эйбл. На вашем острове он находится с 5 утра, до 10 вечера.
+              </p>
+              <p>
+                Взаимодействовать с ним могут все гости острова.
+              </p>
+            </div>
+          </div>
+          <img
+            src="/assets/other/guests_kiks.jpg"
+            alt="Кикс"
+            loading="lazy"
+          />
+        </article>
+
+        <article class="guest-card">
+          <div class="guest-body">
+            <h2>Лейф</h2>
+            <p class="guest-subtitle">Знает о растениях всё</p>
+            <div class="guest-description">
+              <p>
+                Продаёт саженцы деревьев, кустов, семена неродных цветов и овощи. Приехав на ваш остров в третий раз, он подарит вам инструкцию живой изгороди, при условии, что в каждое его посещение острова вы что-то покупали.
+              </p>
+              <p>
+                Взаимодействовать с ним могут все гости острова. Для жителей острова предоставляет услуги по прополке - за 60'000 диней собирает все сорняки и оставляет в утиль-сундуке (иногда эта функция багуется и не работает).
+              </p>
+            </div>
+          </div>
+          <img
+            src="/assets/other/guests_leif.jpg"
+            alt="Лейф"
+            loading="lazy"
+          />
+        </article>
+
+        <article class="guest-card">
+          <div class="guest-body">
+            <h2>Лейбл</h2>
+            <p class="guest-subtitle">Самая модная из сестер</p>
+            <div class="guest-description">
+              <p>
+                Она будет переодически приезжать на ваш остров, после того, как вы построите ателье. Лейбл попросит вас составить образ по предложенной теме, а потом оценит то, что вы подобрали. В благодарность ежиха подарит вам что-то из своей коллекции одежды, а на следующее утро пришлёт по почте талоны в ателье.
+              </p>
+              <p>
+                С ней может говорить только житель острова.
+              </p>
+            </div>
+          </div>
+          <img
+            src="/assets/other/guests_lable.jpg"
+            alt="Лейбл"
+            loading="lazy"
+          />
+        </article>
+
+        <article class="guest-card">
+          <div class="guest-body">
+            <h2>Сахара</h2>
+            <p class="guest-subtitle">Поможет обновить интерьер</p>
+            <div class="guest-description">
+              <p>
+                Приезжает на ваш остров, чтобы продать загадочный ковёр и загадочные обои. За каждую покупку выдаёт «ваучеры Сахары». Чем большего размера ковёр вы купите, тем больше ваучеров получите. За маленький ковёр - 1 ваучер; за средний ковёр - 2 ваучера; за большой - 3 ваучера. За 5 «ваучеров Сахары» можно бесплатно приобретать загадочные обои и ковры.
+              </p>
+              <p>
+                Взаимодействовать с ней могут все гости острова.
+              </p>
+            </div>
+          </div>
+          <img
+            src="/assets/other/guests_sakhar.jpg"
+            alt="Сахара"
+            loading="lazy"
+          />
+        </article>
+
+        <article class="guest-card">
+          <div class="guest-body">
+            <h2>Уисп</h2>
+            <p class="guest-subtitle">Самое доброе приведение</p>
+            <div class="guest-description">
+              <p>
+                Не часто появляется вечером на вашем острове в вечернее время. При вашем взаимодействии с Уиспом, он испугается и из него вылетит пять частиц духа, которые он вас попросит поймать. За помощь с поимкой всех частиц, Уисп одарит вас либо чем-то ценным, либо чем-то новым. Тут уже все будет зависеть от вашего выбора.
+              </p>
+              <p>
+                С ним говорить может только житель острова.
+              </p>
+            </div>
+          </div>
+          <img
+            src="/assets/other/guests_wisp.jpg"
+            alt="Уисп"
+            loading="lazy"
+          />
+        </article>
+      </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="/components/load-components.js"></script>
+  </body>
+</html>

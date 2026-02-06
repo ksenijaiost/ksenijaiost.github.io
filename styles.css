@@ -568,6 +568,67 @@ a:focus {
 .term-card ul {
   margin: 12px 0 0 20px;
 }
+
+/* ============================================
+   Guests Page Styles
+   ============================================ */
+.guests-list {
+  display: grid;
+  gap: 24px;
+  padding: 30px 0 60px;
+}
+
+.guest-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.guest-card:nth-child(even) {
+  background: #f8fafc;
+}
+
+.guest-card img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 14px;
+}
+
+.guest-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.guest-card h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.guest-subtitle {
+  font-size: 16px;
+  color: var(--muted);
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+.guest-description {
+  margin: 0;
+}
+
+.guest-description p {
+  margin: 0 0 12px;
+}
+
+.guest-description p:last-child {
+  margin-bottom: 0;
+}
  
 /* ============================================
    Footer
@@ -621,5 +682,14 @@ a:focus {
 
   .term-card {
     grid-template-columns: 1fr;
+  }
+
+  .guest-card {
+    grid-template-columns: 1fr;
+  }
+
+  .guest-card img {
+    order: -1;
+    max-height: 300px;
   }
 }
