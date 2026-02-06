@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Название страницы</title>
+    <meta name="description" content="Описание страницы для поисковых систем" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Плейсхолдер для шапки (загружается автоматически) -->
+    <div id="header-placeholder"></div>
+
+    <main id="content">
+      <!-- 
+        HERO СЕКЦИЯ
+        Варианты использования:
+        
+        1. Стандартная hero с фоном:
+        <section class="hero" style="background-image: url('путь/к/изображению.jpg');">
+        
+        2. Hero с цветным фоном (для разных страниц):
+        <section class="hero hero-compact hero-bg-qa">
+          (доступны: hero-bg-newspaper, hero-bg-contest, hero-bg-qa, hero-bg-terminology)
+        
+        3. Hero по центру:
+        <section class="hero hero-compact hero-centered hero-bg-terminology">
+      -->
+      <section class="hero hero-compact hero-centered hero-bg-qa">
+        <div class="container hero-content">
+          <p class="eyebrow">Animal Crossing New Horizon Guide</p>
+          <h1>Заголовок страницы</h1>
+          <p class="lead">
+            Описание или вводный текст страницы. Можно использовать несколько параграфов.
+          </p>
+          <a class="back-link" href="/">← На главную</a>
+        </div>
+      </section>
+
+      <!-- 
+        ОСНОВНОЙ КОНТЕНТ
+        Используйте section-grid для списка карточек или обычные секции для текста
+      -->
+      <section class="container section-grid">
+        <article class="section-card">
+          <h2>Заголовок секции</h2>
+          <div class="section-body">
+            <p>Текст контента. Можно использовать:</p>
+            <ul>
+              <li>Списки</li>
+              <li>Ссылки: <a href="#">пример ссылки</a></li>
+              <li>Жирный текст: <strong>важная информация</strong></li>
+              <li>Курсив: <em>дополнительная информация</em></li>
+            </ul>
+            
+            <!-- Вложенные списки -->
+            <ul class="sublist">
+              <li>Вложенный пункт 1</li>
+              <li>Вложенный пункт 2</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Еще одна карточка -->
+        <article class="section-card">
+          <h2>Другая секция</h2>
+          <div class="section-body">
+            <p>Контент другой секции.</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- 
+        ДЛЯ Q&A СТРАНИЦ (пример структуры)
+        Раскомментируйте, если создаете страницу с вопросами-ответами
+      -->
+      <!--
+      <section class="qa-preface">
+        <div class="container section-grid">
+          <article class="section-card qa-preface-card">
+            <p><strong>ОГЛАВЛЕНИЕ:</strong></p>
+            <ol class="qa-toc">
+              <li><a href="#question1">Первый вопрос</a></li>
+              <li><a href="#question2">Второй вопрос</a></li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <section class="container qa-grid">
+        <h2>Вопросы</h2>
+
+        <article class="qa-card" id="question1">
+          <h3>Первый вопрос?</h3>
+          <div class="qa-answer">
+            <p>Ответ на вопрос.</p>
+            <figure class="qa-figure">
+              <img src="../assets/path/to/image.jpg" alt="Описание изображения" loading="lazy" />
+              <figcaption class="qa-caption">Подпись к изображению</figcaption>
+            </figure>
+          </div>
+        </article>
+      </section>
+      -->
+    </main>
+
+    <!-- Плейсхолдер для подвала (загружается автоматически) -->
+    <div id="footer-placeholder"></div>
+    <script src="../components/load-components.js"></script>
+  </body>
+</html>
