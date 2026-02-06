@@ -206,6 +206,11 @@ a:focus {
   margin-top: 12px;
 }
 
+.hero-centered .lead {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Page-specific hero backgrounds */
 .hero-bg-newspaper {
   background-color: var(--bg-newspaper);
