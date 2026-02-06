@@ -1,9 +1,7 @@
 // Простой скрипт для загрузки шапки и подвала
 (function() {
-  // Определяем путь к компонентам в зависимости от глубины вложенности
-  const pathParts = window.location.pathname.split('/').filter(p => p && p !== 'index.html' && p !== '');
-  const pathDepth = pathParts.length > 0 ? pathParts.length : 0;
-  const componentsPath = pathDepth > 0 ? '../'.repeat(pathDepth) + 'components/' : 'components/';
+  // Используем абсолютные пути от корня
+  const componentsPath = '/components/';
   
   // Загружаем шапку
   fetch(componentsPath + 'header.html')
@@ -23,7 +21,7 @@
     .catch(err => console.error('Ошибка загрузки шапки:', err));
   
   // Загружаем подвал
-  fetch(componentsPath + 'footer.html')
+  fetch('/components/footer.html')
     .then(response => response.text())
     .then(html => {
       const footerPlaceholder = document.getElementById('footer-placeholder');
