@@ -194,6 +194,9 @@ a:focus {
 
 .hero-centered .hero-content {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-centered h1 {
@@ -209,6 +212,7 @@ a:focus {
 .hero-centered .lead {
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 /* Page-specific hero backgrounds */
