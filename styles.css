@@ -153,10 +153,17 @@ a:focus {
   position: absolute;
   inset: 0;
   background: rgba(255, 255, 255, 0.72);
+  z-index: 1;
 }
 
 .hero-content {
   position: relative;
+  z-index: 2;
+}
+
+/* Для hero с темным фоном заменяем светлый overlay на темный */
+.hero-dark::before {
+  background: rgba(0, 0, 0, 0.8) !important;
 }
 
 .eyebrow {
@@ -215,35 +222,36 @@ a:focus {
   text-align: center;
 }
 
-/* Hero с темным overlay и белым текстом */
-.hero-dark::before {
-  background: rgba(0, 0, 0, 0.5);
-}
+/* Hero с темным overlay и белым текстом - переопределяем светлый overlay */
 
 .hero-dark {
-  color: #fff;
+  color: #fff !important;
+}
+
+.hero-dark .hero-content {
+  color: #fff !important;
 }
 
 .hero-dark .eyebrow {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .hero-dark h1 {
-  color: #fff;
+  color: #fff !important;
 }
 
 .hero-dark p {
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(255, 255, 255, 0.95) !important;
 }
 
 .hero-dark .back-link {
-  color: #fff;
-  border-bottom-color: rgba(255, 255, 255, 0.5);
+  color: #fff !important;
+  border-bottom-color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .hero-dark .back-link:hover {
-  color: #fff;
-  border-bottom-color: #fff;
+  color: #fff !important;
+  border-bottom-color: #fff !important;
 }
 
 /* Page-specific hero backgrounds */
