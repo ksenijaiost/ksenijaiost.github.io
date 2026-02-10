@@ -579,39 +579,95 @@ a:focus {
 }
 
 /* ============================================
-   Универсальные модификаторы для карточек
+   Универсальные карточки и сетки
    ============================================ */
-/* Дополнительный отступ снизу для карточек вне сетки */
+/* Модификаторы для карточек */
 .card-mb,
 .section-card-mb,
 .guest-card-mb {
   margin-bottom: 40px;
 }
 
-/* Алиасы для обратной совместимости (используют те же стили) */
-.star-shards-grid,
-.items-grid {
+/* Сетка для списка карточек (гости, персонажи, предметы) */
+.guests-list,
+.items-grid,
+.star-shards-grid {
   display: grid;
-  gap: 20px;
+  gap: 24px;
   padding: 30px 0 60px;
 }
 
-.star-shards-row-2,
-.items-row-2 {
+/* Карточка персонажа/гостя (текст слева, изображение справа) */
+.guest-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.guest-card:nth-child(even) {
+  background: #f8fafc;
+}
+
+.guest-card img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 14px;
+}
+
+.guest-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.guest-card h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.guest-subtitle {
+  font-size: 16px;
+  color: var(--muted);
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+.guest-description {
+  margin: 0;
+}
+
+.guest-description p {
+  margin: 0 0 12px;
+}
+
+.guest-description p:last-child {
+  margin-bottom: 0;
+}
+
+/* Сетка для карточек предметов (осколки звезд и т.д.) */
+.items-row-2,
+.star-shards-row-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
-.star-shards-row-3,
-.items-row-3 {
+.items-row-3,
+.star-shards-row-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.star-shard-item,
-.item-card {
+/* Карточка предмета (изображение по центру, текст под ним) */
+.item-card,
+.star-shard-item {
   background: #fff;
   border-radius: 16px;
   padding: 20px;
@@ -623,22 +679,22 @@ a:focus {
   gap: 12px;
 }
 
-.star-shard-item img,
-.item-card img {
+.item-card img,
+.star-shard-item img {
   width: 80px;
   height: 80px;
   object-fit: contain;
 }
 
-.star-shard-item h3,
-.item-card h3 {
+.item-card h3,
+.star-shard-item h3 {
   margin: 0;
   font-size: 18px;
   font-weight: 600;
 }
 
-.star-shard-item p,
-.item-card p {
+.item-card p,
+.star-shard-item p {
   margin: 0;
   font-size: 14px;
   color: var(--muted);
@@ -753,67 +809,6 @@ a:focus {
   background: var(--accent);
 }
 
-/* ============================================
-   Guests Page Styles
-   ============================================ */
-.guests-list {
-  display: grid;
-  gap: 24px;
-  padding: 30px 0 60px;
-}
-
-.guest-card {
-  background: #fff;
-  border-radius: 18px;
-  padding: 24px;
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  gap: 24px;
-  align-items: start;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-}
-
-.guest-card:nth-child(even) {
-  background: #f8fafc;
-}
-
-.guest-card img {
-  width: 100%;
-  height: auto;
-  max-height: 400px;
-  object-fit: contain;
-  border-radius: 14px;
-}
-
-.guest-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.guest-card h2 {
-  margin: 0 0 8px;
-  font-size: 28px;
-}
-
-.guest-subtitle {
-  font-size: 16px;
-  color: var(--muted);
-  font-weight: 600;
-  margin: 0 0 16px;
-}
-
-.guest-description {
-  margin: 0;
-}
-
-.guest-description p {
-  margin: 0 0 12px;
-}
-
-.guest-description p:last-child {
-  margin-bottom: 0;
-}
- 
 /* ============================================
    Footer
    ============================================ */
