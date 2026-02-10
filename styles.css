@@ -579,6 +579,181 @@ a:focus {
 }
 
 /* ============================================
+   Универсальные модификаторы для карточек
+   ============================================ */
+/* Дополнительный отступ снизу для карточек вне сетки */
+.card-mb,
+.section-card-mb,
+.guest-card-mb {
+  margin-bottom: 40px;
+}
+
+/* Алиасы для обратной совместимости (используют те же стили) */
+.star-shards-grid,
+.items-grid {
+  display: grid;
+  gap: 20px;
+  padding: 30px 0 60px;
+}
+
+.star-shards-row-2,
+.items-row-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.star-shards-row-3,
+.items-row-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.star-shard-item,
+.item-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.star-shard-item img,
+.item-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.star-shard-item h3,
+.item-card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.star-shard-item p,
+.item-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Универсальная галерея (можно использовать на любой странице) */
+.image-gallery,
+.diy-gallery {
+  padding: 30px 0 60px;
+}
+
+.image-gallery h2,
+.diy-gallery h2 {
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+.gallery-container,
+.diy-gallery-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gallery-slide,
+.diy-gallery-slide {
+  display: none;
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.gallery-slide.active,
+.diy-gallery-slide.active {
+  display: block;
+}
+
+.gallery-slide img,
+.diy-gallery-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+
+.gallery-slide h3,
+.diy-gallery-slide h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.gallery-nav,
+.diy-gallery-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.gallery-btn,
+.diy-gallery-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.gallery-btn:hover,
+.diy-gallery-btn:hover {
+  background: var(--accent-dark);
+}
+
+.gallery-btn:disabled,
+.diy-gallery-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.gallery-dots,
+.diy-gallery-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.gallery-dot,
+.diy-gallery-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d1d5db;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.gallery-dot.active,
+.diy-gallery-dot.active {
+  background: var(--accent);
+}
+
+/* ============================================
    Guests Page Styles
    ============================================ */
 .guests-list {

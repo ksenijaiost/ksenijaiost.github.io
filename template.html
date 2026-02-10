@@ -36,7 +36,7 @@
         <div class="container hero-content">
           <p class="eyebrow">Animal Crossing New Horizon Guide</p>
           <h1>Заголовок страницы</h1>
-          <p class="lead">
+          <p>
             Описание или вводный текст страницы. Можно использовать несколько параграфов.
           </p>
           <a class="back-link" href="/">← На главную</a>
@@ -108,10 +108,56 @@
         </article>
       </section>
       -->
+
+      <!-- 
+        ГАЛЕРЕЯ С ЛИСТАНИЕМ (пример структуры)
+        Раскомментируйте, если нужна галерея с возможностью листать картинки
+      -->
+      <!--
+      <section class="container image-gallery">
+        <h2>Заголовок галереи</h2>
+        <p style="text-align: center; margin-bottom: 30px;">
+          Описание галереи (опционально).
+        </p>
+
+        <div class="gallery-container">
+          <!-- Слайд 1 -->
+          <div class="gallery-slide">
+            <img src="/assets/path/to/image1.jpg" alt="Описание 1" loading="lazy" />
+            <h3>Название первого слайда</h3>
+          </div>
+
+          <!-- Слайд 2 -->
+          <div class="gallery-slide">
+            <img src="/assets/path/to/image2.jpg" alt="Описание 2" loading="lazy" />
+            <h3>Название второго слайда</h3>
+          </div>
+
+          <!-- Слайд 3 -->
+          <div class="gallery-slide">
+            <img src="/assets/path/to/image3.jpg" alt="Описание 3" loading="lazy" />
+            <h3>Название третьего слайда</h3>
+          </div>
+
+          <!-- Навигация -->
+          <div class="gallery-nav">
+            <button class="gallery-btn" aria-label="Предыдущий">‹</button>
+            <div class="gallery-dots">
+              <button class="gallery-dot active" aria-label="Слайд 1"></button>
+              <button class="gallery-dot" aria-label="Слайд 2"></button>
+              <button class="gallery-dot" aria-label="Слайд 3"></button>
+            </div>
+            <button class="gallery-btn" aria-label="Следующий">›</button>
+          </div>
+        </div>
+      </section>
+      -->
     </main>
 
     <!-- Плейсхолдер для подвала (загружается автоматически) -->
     <div id="footer-placeholder"></div>
     <script src="/components/load-components.js"></script>
+    <!-- Подключите gallery.js, если используете галерею на странице -->
+    <!-- <script src="/components/gallery.js"></script> -->
   </body>
 </html>
