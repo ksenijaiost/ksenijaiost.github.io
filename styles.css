@@ -215,6 +215,37 @@ a:focus {
   text-align: center;
 }
 
+/* Hero с темным overlay и белым текстом */
+.hero-dark::before {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-dark {
+  color: #fff;
+}
+
+.hero-dark .eyebrow {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-dark h1 {
+  color: #fff;
+}
+
+.hero-dark p {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.hero-dark .back-link {
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-dark .back-link:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
 /* Page-specific hero backgrounds */
 .hero-bg-newspaper {
   background-color: var(--bg-newspaper);
