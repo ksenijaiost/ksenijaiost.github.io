@@ -62,7 +62,8 @@ a:focus {
 }
 
 /* Утилита для выравнивания текста по ширине */
-.text-justify {
+.text-justify,
+.text-justify p {
   text-align: justify;
   text-align-last: left;
 }
