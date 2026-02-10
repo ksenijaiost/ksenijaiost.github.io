@@ -61,6 +61,12 @@ a:focus {
   border-bottom-color: currentColor;
 }
 
+/* Утилита для выравнивания текста по ширине */
+.text-justify {
+  text-align: justify;
+  text-align-last: left;
+}
+
 /* ============================================
    Layout
    ============================================ */
