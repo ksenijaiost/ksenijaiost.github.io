@@ -694,6 +694,10 @@ a:focus {
   margin-top: 16px;
 }
 
+.guest-card .card-extra {
+  grid-column: 1 / -1;
+}
+
 .card-extra p {
   margin: 0 0 12px;
 }
