@@ -689,6 +689,20 @@ a:focus {
   margin-bottom: 0;
 }
 
+/* Дополнительный текст под карточкой (на всю ширину контейнера) */
+.card-extra {
+  max-width: 720px;
+  margin: 16px auto 0;
+}
+
+.card-extra p {
+  margin: 0 0 12px;
+}
+
+.card-extra p:last-child {
+  margin-bottom: 0;
+}
+
 /* Сетка для карточек предметов (осколки звезд и т.д.) */
 .items-row-2,
 .star-shards-row-2 {
