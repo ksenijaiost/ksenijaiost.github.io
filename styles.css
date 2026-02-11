@@ -173,6 +173,11 @@ a:focus {
   background: rgba(0, 0, 0, 0.8) !important;
 }
 
+/* Для hero с легким overlay (чтобы картинка была лучше видна) */
+.hero-light-overlay::before {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.08em;
