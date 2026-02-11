@@ -1,4 +1,9 @@
 /* ============================================
+   Google Fonts
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+
+/* ============================================
    CSS Variables (Design Tokens)
    ============================================ */
 :root {
@@ -36,7 +41,7 @@
 
 body {
   margin: 0;
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: "Balsamiq Sans", cursive;
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;
@@ -176,6 +181,11 @@ a:focus {
 /* Для hero с легким overlay (чтобы картинка была лучше видна) */
 .hero-light-overlay::before {
   background: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Для hero без overlay (чтобы картинка была полностью видна) */
+.hero-no-overlay::before {
+  display: none;
 }
 
 .eyebrow {
