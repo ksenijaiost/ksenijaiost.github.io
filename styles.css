@@ -985,14 +985,67 @@ details.accordion[open] summary::after {
    Support Page Styles
    ============================================ */
 .support-donate-block {
-  min-height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  padding: 24px 0;
+  border-top: 2px solid var(--border);
+  margin-top: 32px;
 }
 
-.support-donate-block:empty {
-  min-height: 80px;
+.support-donate-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.support-donate-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.support-donate-hint {
+  font-style: italic;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.support-donate-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--accent);
+  color: #fff !important;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  transition: background 0.2s ease;
+}
+
+.support-donate-btn:hover,
+.support-donate-btn:focus {
+  background: var(--accent-dark);
+  border-bottom: none;
+}
+
+.support-donate-note {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.support-donate-note a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .support-donate-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
 }
 
 /* ============================================
