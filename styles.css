@@ -743,6 +743,13 @@ a:focus {
   gap: 20px;
 }
 
+.items-row-1,
+.star-shards-row-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
 /* Карточка предмета (изображение по центру, текст под ним) */
 .item-card,
 .star-shard-item {
@@ -935,20 +942,43 @@ a:focus {
    Responsive Design
    ============================================ */
 @media (max-width: 800px) {
+  /* Уменьшаем отступы контейнера */
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Hero секции */
   .hero {
-    padding: 80px 0;
+    padding: 60px 0;
+  }
+
+  .hero-compact {
+    padding: 60px 0 30px;
   }
 
   .hero h1 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .hero-compact h1 {
-    font-size: 28px;
+    font-size: 24px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
   }
 
   .lead {
     font-size: 18px;
+  }
+
+  /* Карточки */
+  .section-card {
+    padding: 20px;
+  }
+
+  .section-card h2 {
+    font-size: 20px;
   }
 
   .term-card {
@@ -957,10 +987,185 @@ a:focus {
 
   .guest-card {
     grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 16px;
   }
 
   .guest-card img {
     order: -1;
-    max-height: 300px;
+    max-height: 250px;
+  }
+
+  .guest-card h2 {
+    font-size: 24px;
+  }
+
+  /* Сетки для карточек песен и предметов */
+  .items-row-3,
+  .star-shards-row-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .items-row-2,
+  .star-shards-row-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .items-row-1,
+  .star-shards-row-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .guests-list,
+  .items-grid,
+  .star-shards-grid {
+    gap: 20px;
+    padding: 24px 0 40px;
+  }
+
+  /* Карточки предметов */
+  .item-card,
+  .star-shard-item {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .item-card img,
+  .star-shard-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .item-card h3,
+  .star-shard-item h3 {
+    font-size: 16px;
+  }
+
+  /* Заголовки секций */
+  .section-grid {
+    padding: 30px 0 40px;
+  }
+
+  /* Q&A карточки */
+  .qa-card {
+    padding: 16px 20px;
+  }
+
+  /* Header */
+  .header-content {
+    padding: 12px 0;
+  }
+
+  .brand-title {
+    font-size: 16px;
+  }
+
+  .brand-subtitle {
+    font-size: 11px;
+  }
+
+  .nav {
+    gap: 10px;
+  }
+
+  .nav a {
+    font-size: 13px;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 24px 0;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+/* Очень маленькие экраны (до 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .hero {
+    padding: 50px 0;
+  }
+
+  .hero-compact {
+    padding: 50px 0 24px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero-compact h1 {
+    font-size: 22px;
+  }
+
+  /* Сетки становятся одноколоночными */
+  .items-row-3,
+  .star-shards-row-3,
+  .items-row-2,
+  .star-shards-row-2 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Карточки */
+  .section-card {
+    padding: 16px;
+  }
+
+  .guest-card {
+    padding: 16px;
+  }
+
+  .guest-card h2 {
+    font-size: 20px;
+  }
+
+  /* Уменьшаем размеры изображений в карточках предметов */
+  .item-card img,
+  .star-shard-item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .item-card h3,
+  .star-shard-item h3 {
+    font-size: 14px;
+  }
+
+  /* Header на очень маленьких экранах */
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  /* Footer на очень маленьких экранах */
+  .site-footer {
+    padding: 20px 0;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
   }
 }
