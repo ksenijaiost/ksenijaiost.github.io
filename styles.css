@@ -421,11 +421,14 @@ details.accordion[open] summary::after {
 /* ============================================
    Rules Page Styles
    ============================================ */
-.rules-figure {
+/* Универсальный блок с широкой иллюстрацией внутри карточки/секции */
+.rules-figure,
+.guide-figure {
   margin: 0 0 20px;
 }
 
-.rules-figure img {
+.rules-figure img,
+.guide-figure img {
   width: 100%;
   border-radius: 16px;
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
