@@ -916,7 +916,21 @@ a:focus {
 .muted {
   color: #9ca3af;
 }
- 
+
+/* ============================================
+   Support Page Styles
+   ============================================ */
+.support-donate-block {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.support-donate-block:empty {
+  min-height: 80px;
+}
+
 /* ============================================
    Responsive Design
    ============================================ */
