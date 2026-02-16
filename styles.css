@@ -418,6 +418,31 @@ details.accordion[open] summary::after {
   font-size: 15px;
 }
 
+/* Текст и картинка рядом (например, блок Нукофон) */
+.accordion-side-by-side {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.accordion-side-text {
+  min-width: 0;
+}
+
+.accordion-side-figure {
+  margin: 0;
+  position: sticky;
+  top: 20px;
+}
+
+.accordion-side-figure img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
 /* ============================================
    Rules Page Styles
    ============================================ */
@@ -1108,6 +1133,18 @@ details.accordion[open] summary::after {
 
   .guest-card h2 {
     font-size: 24px;
+  }
+
+  .accordion-side-by-side {
+    grid-template-columns: 1fr;
+  }
+
+  .accordion-side-figure {
+    position: static;
+  }
+
+  .accordion-side-figure img {
+    max-width: 100%;
   }
 
   /* Сетки для карточек песен и предметов */
