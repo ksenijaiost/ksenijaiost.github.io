@@ -25,6 +25,12 @@
         
         3. Hero по центру:
         <section class="hero hero-compact hero-centered hero-bg-terminology">
+        
+        4. Hero с тёмным оверлеем и белым текстом (для тёмных фонов):
+        <section class="hero hero-compact hero-centered hero-dark" style="background-image: url('...');">
+        
+        5. Hero без оверлея (картинка видна полностью):
+        <section class="hero hero-no-overlay" style="background-image: url('...');">
       -->
       <section class="hero hero-compact hero-centered hero-bg-qa" style="background-image: url('/assets/background/acnh_leaf_coral.png');">
         <div class="container hero-content">
@@ -63,6 +69,11 @@
             <figure class="guide-figure">
               <img src="/assets/path/to/image.jpg" alt="Пример иллюстрации для секции" loading="lazy" />
             </figure>
+
+            <!-- Выравнивание текста по ширине (опционально) -->
+            <div class="text-justify">
+              <p>Текст в таком блоке будет выровнен по ширине.</p>
+            </div>
 
             <!-- Пример сноски под текстом -->
             <p class="muted note-small">
@@ -105,6 +116,66 @@
           </div>
         </article>
       </section>
+      -->
+
+      <!-- 
+        АККОРДЕОН С КАРТИНКОЙ СБОКУ (accordion-side-by-side)
+        Текст слева, иллюстрация справа. На узких экранах — в одну колонку (текст сверху, картинка снизу).
+      -->
+      <!--
+      <details class="accordion">
+        <summary>Заголовок блока</summary>
+        <div class="accordion-content">
+          <div class="accordion-side-by-side">
+            <div class="accordion-side-text">
+              <p>Вступительный текст.</p>
+              <ol>
+                <li>Пункт списка 1</li>
+                <li>Пункт списка 2</li>
+              </ol>
+            </div>
+            <figure class="guide-figure accordion-side-figure">
+              <img src="/assets/path/to/image.png" alt="Описание" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </details>
+      -->
+
+      <!-- 
+        КАРТОЧКИ ПЕРСОНАЖЕЙ/ГОСТЕЙ (guest-card)
+        Сетка: фото справа (или слева у чётных), текст слева. Для списка персонажей, гостей острова и т.п.
+      -->
+      <!--
+      <section class="container section-grid">
+        <h2>Заголовок списка</h2>
+        <div class="guests-list">
+          <article class="guest-card">
+            <div>
+              <h2>Имя персонажа</h2>
+              <p class="guest-subtitle">Краткое описание</p>
+              <p>Полное описание. Может быть несколько абзацев.</p>
+            </div>
+            <img src="/assets/path/to/character.png" alt="Имя персонажа" loading="lazy" />
+          </article>
+        </div>
+      </section>
+      -->
+
+      <!-- 
+        СЕТКА ПРЕДМЕТОВ (items-grid + item-card)
+        Карточки с иконкой слева и текстом. Классы для колонок: items-row-3 (3 в ряд), items-row-2, items-row-1.
+      -->
+      <!--
+      <div class="items-grid items-row-3">
+        <article class="item-card">
+          <img src="/assets/path/to/icon.png" alt="" loading="lazy" />
+          <div>
+            <h3>Название предмета</h3>
+            <p>Краткое описание.</p>
+          </div>
+        </article>
+      </div>
       -->
 
       <!-- 
