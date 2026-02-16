@@ -32,7 +32,7 @@ npx serve .
   - `chat/newspaper/index.html` — газета чата (выпуски).
   - `chat/contest/index.html` — конкурсы чата.
 - `residents/` — страницы про жителей:
-  - `residents/part_one/index.html` — основные вопросы про жителей.
+  - `residents/residents_questions/index.html` — основные вопросы про жителей.
   - `residents/residents_gifts/index.html` — жители и подарки.
 - `styles.css` — общий стиль для всех страниц (унифицированный, с комментариями).
 - `assets/` — папка с локальными изображениями.
