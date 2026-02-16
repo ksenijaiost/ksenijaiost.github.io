@@ -681,6 +681,51 @@ details.accordion[open] summary::after {
   color: var(--muted);
 }
 
+/* Текст слева, маленькая картинка справа (например, блок Брюстер) */
+.qa-answer-side-figure {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: start;
+}
+
+.qa-answer-side-figure .qa-answer-side-text {
+  min-width: 0;
+}
+
+.qa-figure-side {
+  margin: 0;
+}
+
+.qa-figure-side img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+/* Несколько картинок в ряд (например, виды островов) */
+.qa-figures-row {
+  display: grid;
+  gap: 16px;
+  margin: 16px 0 0;
+}
+
+.qa-figures-row.qa-figures-row-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.qa-figures-row .qa-figure {
+  margin: 0;
+}
+
+.qa-figures-row .qa-figure img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
 /* ============================================
    Terminology Page Styles
    ============================================ */
@@ -1198,6 +1243,14 @@ details.accordion[open] summary::after {
   /* Q&A карточки */
   .qa-card {
     padding: 16px 20px;
+  }
+
+  .qa-answer-side-figure {
+    grid-template-columns: 1fr;
+  }
+
+  .qa-figures-row.qa-figures-row-3 {
+    grid-template-columns: 1fr;
   }
 
   /* Header */
