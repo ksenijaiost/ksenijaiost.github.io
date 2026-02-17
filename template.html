@@ -179,39 +179,6 @@
       -->
 
       <!-- 
-        ДЛЯ Q&A СТРАНИЦ (пример структуры)
-        Раскомментируйте, если создаете страницу с вопросами-ответами
-      -->
-      <!--
-      <section class="qa-preface">
-        <div class="container section-grid">
-          <article class="section-card qa-preface-card">
-            <p><strong>ОГЛАВЛЕНИЕ:</strong></p>
-            <ol class="qa-toc">
-              <li><a href="#question1">Первый вопрос</a></li>
-              <li><a href="#question2">Второй вопрос</a></li>
-            </ol>
-          </article>
-        </div>
-      </section>
-
-      <section class="container qa-grid">
-        <h2>Вопросы</h2>
-
-        <article class="qa-card" id="question1">
-          <h3>Первый вопрос?</h3>
-          <div class="qa-answer">
-            <p>Ответ на вопрос.</p>
-            <figure class="qa-figure">
-              <img src="/assets/path/to/image.jpg" alt="Описание изображения" loading="lazy" />
-              <figcaption class="qa-caption">Подпись к изображению</figcaption>
-            </figure>
-          </div>
-        </article>
-      </section>
-      -->
-
-      <!-- 
         ГАЛЕРЕЯ С ЛИСТАНИЕМ (пример структуры)
         Раскомментируйте, если нужна галерея с возможностью листать картинки
       -->
@@ -253,6 +220,126 @@
           </div>
         </div>
       </section>
+      -->
+
+      <!-- 
+        ДЛЯ Q&A СТРАНИЦ (пример структуры)
+        Раскомментируйте, если создаете страницу с вопросами-ответами
+      -->
+      <!--
+      <section class="qa-preface">
+        <div class="container section-grid">
+          <article class="section-card qa-preface-card">
+            <p><strong>ОГЛАВЛЕНИЕ:</strong></p>
+            <ol class="qa-toc">
+              <li><a href="#question1">Первый вопрос</a></li>
+              <li><a href="#question2">Второй вопрос</a></li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <section class="container qa-grid">
+        <h2>Вопросы</h2>
+
+        <article class="qa-card" id="question1">
+          <h3>Первый вопрос?</h3>
+          <div class="qa-answer">
+            <p>Ответ на вопрос.</p>
+            <figure class="qa-figure">
+              <img src="/assets/path/to/image.jpg" alt="Описание изображения" loading="lazy" />
+              <figcaption class="qa-caption">Подпись к изображению</figcaption>
+            </figure>
+          </div>
+        </article>
+      </section>
+      -->
+
+      <!-- 
+        Q&A: ТЕКСТ СЛЕВА, МАЛЕНЬКАЯ КАРТИНКА СПРАВА (qa-answer-side-figure)
+        Как в блоке про Брюстера, ипотеку, гироиды. На мобильных — в одну колонку (текст сверху, картинка снизу).
+      -->
+      <!--
+      <article class="qa-card" id="example-side">
+        <h3>Заголовок вопроса</h3>
+        <div class="qa-answer">
+          <div class="qa-answer-side-figure">
+            <div class="qa-answer-side-text">
+              <p>Текст вопроса. Списки, ссылки — как обычно.</p>
+              <ul>
+                <li>Пункт 1</li>
+                <li>Пункт 2</li>
+              </ul>
+            </div>
+            <figure class="qa-figure qa-figure-side">
+              <img src="/assets/path/to/image.png" alt="Описание" loading="lazy" />
+              <figcaption class="qa-caption">Подпись к картинке</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+      -->
+
+      <!-- 
+        Q&A: НЕСКОЛЬКО КАРТИНОК В РЯД (qa-figures-row)
+        qa-figures-row-2 — две в ряд, qa-figures-row-3 — три в ряд. На мобильных — в столбик.
+      -->
+      <!--
+      <article class="qa-card" id="example-row">
+        <h3>Заголовок с картинками в ряд</h3>
+        <div class="qa-answer">
+          <p>Текст перед картинками.</p>
+          <div class="qa-figures-row qa-figures-row-3">
+            <figure class="qa-figure">
+              <img src="/assets/path/to/1.png" alt="Описание 1" loading="lazy" />
+              <figcaption class="qa-caption">Подпись 1</figcaption>
+            </figure>
+            <figure class="qa-figure">
+              <img src="/assets/path/to/2.png" alt="Описание 2" loading="lazy" />
+            </figure>
+            <figure class="qa-figure">
+              <img src="/assets/path/to/3.png" alt="Описание 3" loading="lazy" />
+            </figure>
+          </div>
+          <p>Текст после картинок.</p>
+        </div>
+      </article>
+      -->
+
+      <!-- 
+        Q&A: ПОДЗАГОЛОВОК (h4) И ПРИМЕЧАНИЕ (qa-note)
+        Внутри одной qa-card можно несколько блоков qa-answer и подзаголовки.
+      -->
+      <!--
+      <article class="qa-card" id="example-note">
+        <h3>Вопрос с подпунктами</h3>
+        <div class="qa-answer">
+          <p>Основной текст.</p>
+          <p class="qa-note">Примечание мелким стилем (например: «Хорошо, что без процентов!»).</p>
+        </div>
+        <div class="qa-answer">
+          <h4>Подзаголовок внутри карточки</h4>
+          <p>Текст подпункта.</p>
+        </div>
+      </article>
+      -->
+
+      <!-- 
+        КАРТОЧКА С ДОПОЛНИТЕЛЬНЫМ ТЕКСТОМ НА ВСЮ ШИРИНУ (guest-card + card-extra)
+        Как на странице Селесты: первый абзац рядом с фото, остальное — под картинкой на всю ширину.
+      -->
+      <!--
+      <article class="guest-card">
+        <div>
+          <h2>Имя</h2>
+          <p class="guest-subtitle">Краткое описание</p>
+          <p>Первый абзац — рядом с фото.</p>
+        </div>
+        <img src="/assets/path/to/photo.png" alt="Имя" loading="lazy" />
+        <div class="card-extra">
+          <p>Со второго абзаца текст на всю ширину карточки (под фото).</p>
+        </div>
+      </article>
       -->
     </main>
 
