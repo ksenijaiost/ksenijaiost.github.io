@@ -364,6 +364,42 @@ a:focus {
   margin: 8px 0;
 }
 
+/* Таблицы в контенте */
+.table-wrapper {
+  overflow-x: auto;
+  margin: 16px 0;
+  border-radius: 12px;
+  border: 1px solid var(--border, #e5e7eb);
+}
+.content-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+.content-table th,
+.content-table td {
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border, #e5e7eb);
+}
+.content-table th {
+  background: var(--panel-alt, #f3f4f6);
+  font-weight: 600;
+}
+.content-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.content-table.rang-star-table th:nth-child(2),
+.content-table.rang-star-table th:nth-child(3),
+.content-table.rang-star-table td:nth-child(2),
+.content-table.rang-star-table td:nth-child(3) {
+  text-align: center;
+}
+.content-table.rang-star-table td:last-child {
+  text-align: center;
+  white-space: nowrap;
+}
+
 /* Небольшие сноски/примечания под текстом */
 .note-small {
   font-size: 13px;
