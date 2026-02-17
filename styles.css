@@ -961,6 +961,25 @@ details.accordion[open] summary::after {
   color: var(--muted);
 }
 
+/* Списки в карточках — по левому краю, остальное по центру */
+.item-card > div,
+.star-shard-item > div {
+  width: 100%;
+  min-width: 0;
+}
+.item-card ul,
+.item-card ol,
+.star-shard-item ul,
+.star-shard-item ol {
+  text-align: left;
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+.item-card li,
+.star-shard-item li {
+  margin: 4px 0;
+}
+
 /* Универсальная галерея (можно использовать на любой странице) */
 .image-gallery,
 .diy-gallery {
