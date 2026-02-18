@@ -980,6 +980,30 @@ details.accordion[open] summary::after {
   margin: 4px 0;
 }
 
+/* Сквозная нумерация карточек: только внутри обёртки .items-grids-numbered и при классе .items-grid--numbered */
+.items-grids-numbered {
+  counter-reset: item-card;
+}
+.items-grids-numbered .items-grid--numbered .item-card {
+  counter-increment: item-card;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px 16px;
+  align-items: start;
+  text-align: left;
+}
+.items-grids-numbered .items-grid--numbered .item-card::before {
+  content: counter(item-card);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text, #1e293b);
+}
+.items-grids-numbered .items-grid--numbered .item-card > div {
+  text-align: center;
+  min-width: 0;
+}
+
 /* Универсальная галерея (можно использовать на любой странице) */
 .image-gallery,
 .diy-gallery {
