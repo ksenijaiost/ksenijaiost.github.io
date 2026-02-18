@@ -1030,6 +1030,11 @@ details.accordion[open] summary::after {
   margin: 0 auto;
 }
 
+/* Узкая галерея: картинки в 2 раза меньше (только где добавлен класс) */
+.gallery-container.gallery-container--compact {
+  max-width: 400px;
+}
+
 .gallery-slide,
 .diy-gallery-slide {
   display: none;
