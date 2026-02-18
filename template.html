@@ -88,6 +88,18 @@
           <h2>Другая секция</h2>
           <div class="section-body">
             <p>Контент другой секции.</p>
+            <div class="content-side-by-side">
+              <div class="content-side-text">
+                <p>Текст с одной стороны.</p>
+                <ol>
+                  <li>Пункт списка 1</li>
+                  <li>Пункт списка 2</li>
+                </ol>
+              </div>
+              <figure class="guide-figure content-side-figure">
+                <img src="/assets/path/to/image.png" alt="Описание" loading="lazy" />
+              </figure>
+            </div>
           </div>
         </article>
       </section>
@@ -120,22 +132,22 @@
       -->
 
       <!-- 
-        АККОРДЕОН С КАРТИНКОЙ СБОКУ (accordion-side-by-side)
-        Текст слева, иллюстрация справа. На узких экранах — в одну колонку (текст сверху, картинка снизу).
+        АККОРДЕОН С КАРТИНКОЙ СБОКУ (content-side-by-side внутри details)
+        Текст слева, иллюстрация справа. Классы content-side-by-side, content-side-text, content-side-figure. На узких экранах — в одну колонку.
       -->
       <!--
       <details class="accordion">
         <summary>Заголовок блока</summary>
         <div class="accordion-content">
-          <div class="accordion-side-by-side">
-            <div class="accordion-side-text">
+          <div class="content-side-by-side">
+            <div class="content-side-text">
               <p>Вступительный текст.</p>
               <ol>
                 <li>Пункт списка 1</li>
                 <li>Пункт списка 2</li>
               </ol>
             </div>
-            <figure class="guide-figure accordion-side-figure">
+            <figure class="guide-figure content-side-figure">
               <img src="/assets/path/to/image.png" alt="Описание" loading="lazy" />
             </figure>
           </div>
