@@ -389,15 +389,22 @@ a:focus {
 .content-table tbody tr:last-child td {
   border-bottom: none;
 }
-.content-table.rang-star-table th:nth-child(2),
-.content-table.rang-star-table th:nth-child(3),
-.content-table.rang-star-table td:nth-child(2),
-.content-table.rang-star-table td:nth-child(3) {
+/* Модификатор для таблиц с данными: центрирование колонок 2–3 и последней, чередование фона строк */
+.content-table.content-table-data th:nth-child(2),
+.content-table.content-table-data th:nth-child(3),
+.content-table.content-table-data td:nth-child(2),
+.content-table.content-table-data td:nth-child(3) {
   text-align: center;
 }
-.content-table.rang-star-table td:last-child {
+.content-table.content-table-data td:last-child {
   text-align: center;
   white-space: nowrap;
+}
+.content-table.content-table-data tbody tr:nth-child(even) {
+  background: var(--table-row-alt, rgba(0, 0, 0, 0.03));
+}
+.content-table.content-table-data tbody tr:nth-child(even) td {
+  border-bottom-color: var(--border, #e5e7eb);
 }
 
 /* Небольшие сноски/примечания под текстом */
