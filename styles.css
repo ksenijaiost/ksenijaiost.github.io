@@ -809,9 +809,9 @@ details.accordion[open] summary::after {
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
 }
 
-/* Текст в узкой колонке, картинка большая справа (текста мало) */
+/* Текст до картинки, картинка справа по размеру (без пустого места) */
 .qa-answer-side-figure--wide-figure {
-  grid-template-columns: minmax(0, 320px) 1fr;
+  grid-template-columns: 1fr auto;
 }
 
 .qa-answer-side-figure--wide-figure .qa-figure-side img {
