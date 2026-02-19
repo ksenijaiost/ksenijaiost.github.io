@@ -701,6 +701,11 @@ details.accordion[open] summary::after {
   margin: 6px 0;
 }
 
+.qa-answer .sublist {
+  margin-top: 10px;
+  margin-left: 32px;
+}
+
 .qa-figure {
   margin: 16px 0 0;
 }
@@ -724,6 +729,63 @@ details.accordion[open] summary::after {
   color: var(--muted);
 }
 
+/* Плотный подблок в одной карточке (меньше «воздуха») */
+.qa-subsection--dense {
+  background: var(--card-qa);
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 16px;
+}
+
+.qa-subsection--dense .qa-answer-side-figure {
+  gap: 20px;
+}
+
+.qa-subsection--dense .qa-answer-side-figure + .qa-answer-side-figure {
+  margin-top: 24px;
+}
+
+.qa-subsection--dense .qa-answer-side-text p {
+  margin-bottom: 0.5em;
+}
+
+.qa-subsection--dense .qa-answer-side-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Две картинки справа от текста: в ряд на десктопе, под текстом на мобильных */
+.qa-figures-stack {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.qa-figures-stack .qa-figure {
+  margin: 0;
+}
+
+.qa-figures-stack .qa-figure img {
+  max-width: 180px;
+}
+
+@media (max-width: 700px) {
+  .qa-answer-side-figure--double {
+    grid-template-columns: 1fr;
+  }
+
+  .qa-answer-side-figure--double .qa-figures-stack {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .qa-answer-side-figure--double .qa-figures-stack .qa-figure img {
+    max-width: 220px;
+  }
+}
+
 /* Текст слева, маленькая картинка справа (например, блок Брюстер) */
 .qa-answer-side-figure {
   display: grid;
@@ -745,6 +807,15 @@ details.accordion[open] summary::after {
   max-width: 220px;
   border-radius: 14px;
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+/* Текст в узкой колонке, картинка большая справа (текста мало) */
+.qa-answer-side-figure--wide-figure {
+  grid-template-columns: minmax(0, 320px) 1fr;
+}
+
+.qa-answer-side-figure--wide-figure .qa-figure-side img {
+  max-width: 420px;
 }
 
 /* Картинка в 2 раза уже (аналог gallery-container--compact) */
@@ -784,6 +855,12 @@ details.accordion[open] summary::after {
   object-fit: contain;
   border-radius: 14px;
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+/* Ряд без фиксированной высоты — картинки по своей высоте (одинаковые скрины) */
+.qa-figures-row.qa-figures-row--tight .qa-figure img {
+  height: auto;
+  max-height: 260px;
 }
 
 /* Первая колонка уже, вторая шире (только для ряда из 2 картинок) */
