@@ -747,6 +747,15 @@ details.accordion[open] summary::after {
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
 }
 
+/* Картинка в 2 раза уже (аналог gallery-container--compact) */
+.qa-figure.qa-figure--compact img,
+.qa-figure-side.qa-figure--compact img {
+  max-width: 360px;
+}
+.qa-figure-side.qa-figure--compact img {
+  max-width: 110px;
+}
+
 /* Несколько картинок в ряд (например, виды островов) */
 .qa-figures-row {
   display: grid;
