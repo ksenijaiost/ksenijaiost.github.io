@@ -461,10 +461,10 @@ details.accordion[open] summary::after {
   font-size: 15px;
 }
 
-/* Текст и картинка рядом (в карточке или внутри аккордеона) */
+/* Текст и картинка рядом (в карточке или внутри аккордеона): текст до картинки, картинка прижата к правому краю */
 .content-side-by-side {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr auto;
   gap: 24px;
   align-items: start;
 }
@@ -477,6 +477,7 @@ details.accordion[open] summary::after {
   margin: 0;
   position: sticky;
   top: 20px;
+  justify-self: end;
 }
 
 .content-side-by-side .content-side-figure img {
