@@ -879,6 +879,25 @@ details.accordion[open] summary::after {
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
 }
 
+/* Боковая картинка «во весь рост»: крупнее, по высоте карточки (читаемее) */
+.qa-answer-side-figure--tall {
+  align-items: stretch;
+}
+
+.qa-answer-side-figure--tall .qa-figure-side {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.qa-answer-side-figure--tall .qa-figure-side img {
+  max-width: 340px;
+  width: auto;
+  flex: 1;
+  min-height: 200px;
+  object-fit: contain;
+}
+
 /* Текст до картинки, картинка справа по размеру (без пустого места) */
 .qa-answer-side-figure--wide-figure {
   grid-template-columns: 1fr auto;
@@ -916,6 +935,12 @@ details.accordion[open] summary::after {
   grid-template-columns: repeat(4, 1fr);
 }
 
+/* Ряд из 4 картинок: картинки в 2 раза меньше (компактный вид) */
+.qa-figures-row.qa-figures-row-4.qa-figures-row--compact .qa-figure img {
+  height: auto;
+  max-height: 130px;
+}
+
 .qa-figures-row .qa-figure {
   margin: 0;
   display: flex;
@@ -929,6 +954,11 @@ details.accordion[open] summary::after {
   object-fit: contain;
   border-radius: 14px;
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+/* Ряд с крупными картинками (примерно на треть сетки каждая, читаемее) */
+.qa-figures-row.qa-figures-row--large .qa-figure img {
+  height: 380px;
 }
 
 /* Ряд без фиксированной высоты — картинки по своей высоте (одинаковые скрины) */
@@ -1514,9 +1544,17 @@ details.accordion[open] summary::after {
   }
 
   .qa-figures-row.qa-figures-row-2,
-  .qa-figures-row.qa-figures-row-3,
-  .qa-figures-row.qa-figures-row-4 {
+  .qa-figures-row.qa-figures-row-3 {
     grid-template-columns: 1fr;
+  }
+
+  /* Ряд из 4: на мобилке по 2 в ряд */
+  .qa-figures-row.qa-figures-row-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .qa-figures-row.qa-figures-row-4.qa-figures-row--compact .qa-figure img {
+    max-height: 160px;
   }
 
   /* Header */
