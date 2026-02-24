@@ -912,6 +912,10 @@ details.accordion[open] summary::after {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.qa-figures-row.qa-figures-row-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .qa-figures-row .qa-figure {
   margin: 0;
   display: flex;
@@ -1510,7 +1514,8 @@ details.accordion[open] summary::after {
   }
 
   .qa-figures-row.qa-figures-row-2,
-  .qa-figures-row.qa-figures-row-3 {
+  .qa-figures-row.qa-figures-row-3,
+  .qa-figures-row.qa-figures-row-4 {
     grid-template-columns: 1fr;
   }
 
