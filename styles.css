@@ -956,9 +956,11 @@ details.accordion[open] summary::after {
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
 }
 
-/* Ряд с крупными картинками (примерно на треть сетки каждая, читаемее) */
+/* Ряд с картинками на всю ширину колонки, без «воздуха» вокруг */
 .qa-figures-row.qa-figures-row--large .qa-figure img {
-  height: 380px;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Ряд без фиксированной высоты — картинки по своей высоте (одинаковые скрины) */
