@@ -665,6 +665,39 @@ details.accordion[open] summary::after {
   padding: 30px 0 10px;
 }
 
+/* Оглавление с картинкой сбоку: картинка слева, карточка справа */
+.qa-preface-with-image {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.qa-preface-figure {
+  margin: 0;
+}
+
+.qa-preface-figure img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+@media (max-width: 700px) {
+  .qa-preface-with-image {
+    grid-template-columns: 1fr;
+  }
+
+  .qa-preface-figure {
+    justify-self: center;
+  }
+
+  .qa-preface-figure img {
+    max-width: 320px;
+  }
+}
+
 .qa-preface-card {
   background: var(--card-qa);
 }
@@ -691,6 +724,12 @@ details.accordion[open] summary::after {
 
 .qa-card h3 {
   margin: 0 0 12px;
+}
+
+.qa-spoiler-warning {
+  margin: 32px 0 20px;
+  font-size: 1.1rem;
+  color: var(--text, #1e293b);
 }
 
 .qa-answer ul,
