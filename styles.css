@@ -732,6 +732,36 @@ details.accordion[open] summary::after {
   color: var(--text, #1e293b);
 }
 
+/* Внутренние карточки внутри карточки (универсальный паттерн, напр. раздел «Плюшки» на дачах) */
+.inner-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.inner-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06);
+  margin: 0;
+}
+
+.inner-card h4 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+}
+
+.inner-card h4 + p {
+  margin: 0;
+}
+
+.inner-card p + p,
+.inner-card .muted {
+  margin-top: 8px;
+}
+
 .qa-answer ul,
 .qa-answer ol {
   margin: 12px 0 12px 20px;
