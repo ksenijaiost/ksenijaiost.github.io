@@ -171,6 +171,12 @@ a:focus {
 .hero-content {
   position: relative;
   z-index: 2;
+  min-width: 0;
+}
+
+.hero-content p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 /* Для hero с темным фоном заменяем светлый overlay на темный */
@@ -700,10 +706,17 @@ details.accordion[open] summary::after {
 
 .qa-preface-card {
   background: var(--card-qa);
+  min-width: 0;
 }
 
 .qa-toc {
   margin: 12px 0 0 22px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.qa-toc li {
+  min-width: 0;
 }
 
 .qa-grid {
@@ -1543,6 +1556,13 @@ details.accordion[open] summary::after {
 
   .qa-answer-side-figure {
     grid-template-columns: 1fr;
+  }
+
+  /* Картинки в боковых блоках — на всю ширину колонки на мобилке */
+  .qa-answer-side-figure--tall .qa-figure-side img {
+    max-width: 100%;
+    width: 100%;
+    min-height: 0;
   }
 
   .qa-figures-row.qa-figures-row-2,
