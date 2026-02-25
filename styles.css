@@ -354,16 +354,16 @@ a:focus {
 }
 
 .section-card ul {
-  margin: 8px 0 16px 20px;
+  margin: 4px 0 8px 20px;
 }
 
 .section-card .sublist {
-  margin-top: 10px;
-  margin-left: 32px;
+  margin-top: 5px;
+  margin-left: 24px;
 }
 
 .section-card li {
-  margin: 6px 0;
+  margin: 3px 0;
 }
 
 .section-card p {
@@ -515,7 +515,7 @@ details.accordion[open] summary::after {
 }
 
 .rules-list li {
-  margin: 12px 0;
+  margin: 6px 0;
 }
 
 /* ============================================
@@ -614,7 +614,7 @@ details.accordion[open] summary::after {
 }
 
 .contest-text ul {
-  margin: 12px 0 16px 20px;
+  margin: 6px 0 8px 20px;
 }
 
 .contest-years {
@@ -777,16 +777,16 @@ details.accordion[open] summary::after {
 
 .qa-answer ul,
 .qa-answer ol {
-  margin: 12px 0 12px 20px;
+  margin: 6px 0 6px 20px;
 }
 
 .qa-answer li {
-  margin: 6px 0;
+  margin: 3px 0;
 }
 
 .qa-answer .sublist {
-  margin-top: 10px;
-  margin-left: 32px;
+  margin-top: 5px;
+  margin-left: 24px;
 }
 
 .qa-figure {
@@ -1024,7 +1024,7 @@ details.accordion[open] summary::after {
 }
 
 .term-card ul {
-  margin: 12px 0 0 20px;
+  margin: 6px 0 0 20px;
 }
 
 /* ============================================
@@ -1184,12 +1184,12 @@ details.accordion[open] summary::after {
 .star-shard-item ul,
 .star-shard-item ol {
   text-align: left;
-  margin: 8px 0 0;
+  margin: 4px 0 0;
   padding-left: 20px;
 }
 .item-card li,
 .star-shard-item li {
-  margin: 4px 0;
+  margin: 2px 0;
 }
 
 /* Сквозная нумерация карточек: только внутри обёртки .items-grids-numbered и при классе .items-grid--numbered */
