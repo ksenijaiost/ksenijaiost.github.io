@@ -369,7 +369,8 @@ a:focus {
 
 .section-card .sublist {
   margin-top: 5px;
-  margin-left: 24px;
+  margin-left: 12px;
+  padding-left: 0.75em;
 }
 
 .section-card li {
@@ -796,7 +797,8 @@ details.accordion[open] summary::after {
 
 .qa-answer .sublist {
   margin-top: 5px;
-  margin-left: 24px;
+  margin-left: 12px;
+  padding-left: 0.75em;
 }
 
 .qa-figure {
