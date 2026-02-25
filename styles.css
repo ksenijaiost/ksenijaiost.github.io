@@ -50,6 +50,16 @@ body {
 [id] {
   scroll-margin-top: 110px;
 }
+
+/* Списки по всему сайту: отступ слева в 2 раза меньше типичного */
+ul, ol {
+  padding-left: 1.25em;
+}
+
+ul ul, ol ol, ul ol, ol ul,
+.sublist {
+  padding-left: 1.25em;
+}
  
 /* ============================================
    Typography & Links
