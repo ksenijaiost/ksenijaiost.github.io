@@ -1072,6 +1072,11 @@ details.accordion[open] summary::after {
 
 .split-card:nth-child(even) {
   background: #f8fafc;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+}
+
+.split-card:nth-child(even) img {
+  order: -1;
 }
 
 .split-card img {
@@ -1141,6 +1146,12 @@ details.accordion[open] summary::after {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+/* Компактная сетка предметов (меньше вертикальных отступов) */
+.items-grid.items-grid--compact {
+  padding: 20px 0 40px;
+  gap: 16px;
 }
 
 .items-row-1,
