@@ -1045,12 +1045,12 @@ details.accordion[open] summary::after {
 /* Модификаторы для карточек */
 .card-mb,
 .section-card-mb,
-.guest-card-mb {
+.split-card-mb {
   margin-bottom: 40px;
 }
 
-/* Сетка для списка карточек (гости, персонажи, предметы) */
-.guests-list,
+/* Сетка для списка «широких» карточек (гости, персонажи, типы островов и т.п.) */
+.split-card-list,
 .items-grid,
 .star-shards-grid {
   display: grid;
@@ -1058,8 +1058,8 @@ details.accordion[open] summary::after {
   padding: 30px 0 60px;
 }
 
-/* Карточка персонажа/гостя (текст слева, изображение справа) */
-.guest-card {
+/* Широкая карточка: текст слева, изображение справа */
+.split-card {
   background: #fff;
   border-radius: 18px;
   padding: 24px;
@@ -1070,11 +1070,11 @@ details.accordion[open] summary::after {
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
-.guest-card:nth-child(even) {
+.split-card:nth-child(even) {
   background: #f8fafc;
 }
 
-.guest-card img {
+.split-card img {
   width: 100%;
   height: auto;
   max-height: 400px;
@@ -1087,12 +1087,12 @@ details.accordion[open] summary::after {
   flex-direction: column;
 }
 
-.guest-card h2 {
+.split-card h2 {
   margin: 0 0 8px;
   font-size: 28px;
 }
 
-.guest-subtitle {
+.split-card-subtitle {
   font-size: 16px;
   color: var(--muted);
   font-weight: 600;
@@ -1116,7 +1116,7 @@ details.accordion[open] summary::after {
   margin-top: 16px;
 }
 
-.guest-card .card-extra {
+.split-card .card-extra {
   grid-column: 1 / -1;
 }
 
@@ -1486,18 +1486,18 @@ details.accordion[open] summary::after {
     grid-template-columns: 1fr;
   }
 
-  .guest-card {
+  .split-card {
     grid-template-columns: 1fr;
     padding: 20px;
     gap: 16px;
   }
 
-  .guest-card img {
+  .split-card img {
     order: -1;
     max-height: 250px;
   }
 
-  .guest-card h2 {
+  .split-card h2 {
     font-size: 24px;
   }
 
@@ -1531,7 +1531,7 @@ details.accordion[open] summary::after {
     grid-template-columns: 1fr;
   }
 
-  .guests-list,
+  .split-card-list,
   .items-grid,
   .star-shards-grid {
     gap: 20px;
@@ -1665,11 +1665,11 @@ details.accordion[open] summary::after {
     padding: 16px;
   }
 
-  .guest-card {
+  .split-card {
     padding: 16px;
   }
 
-  .guest-card h2 {
+  .split-card h2 {
     font-size: 20px;
   }
 
