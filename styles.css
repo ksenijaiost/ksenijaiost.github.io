@@ -351,6 +351,11 @@ a:focus {
   padding: 40px 0 60px;
 }
 
+/* Более компактный вертикальный отступ для секции */
+.section-grid.section-grid--compact {
+  padding: 24px 0 32px;
+}
+
 .section-card {
   background: var(--panel);
   border-radius: 18px;
