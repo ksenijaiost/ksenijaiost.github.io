@@ -687,6 +687,11 @@ details.accordion[open] summary::after {
   padding: 30px 0 10px;
 }
 
+/* Более компактное оглавление (меньше вертикальных отступов) */
+.qa-preface.qa-preface--compact {
+  padding: 18px 0 6px;
+}
+
 /* Оглавление с картинкой сбоку: картинка слева, карточка справа */
 .qa-preface-with-image {
   display: grid;
