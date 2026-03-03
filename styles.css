@@ -434,6 +434,14 @@ a:focus {
   font-size: 13px;
   margin-top: 16px;
 }
+
+/* Инлайн-примечание в списке (без отступа) */
+li .note-small,
+li span.note-small {
+  margin: 0;
+  font-size: 0.9em;
+  color: var(--muted);
+}
  
 /* Аккордеон внутри карточек (раскрывающиеся блоки) */
 details.accordion {
@@ -514,13 +522,20 @@ details.accordion[open] summary::after {
    ============================================ */
 /* Универсальный блок с широкой иллюстрацией внутри карточки/секции */
 .rules-figure,
-.guide-figure {
+.guide-figure,
+.guide-figure--full {
   margin: 0 0 20px;
+  max-width: 100%;
+  overflow: hidden;
+  min-width: 0;
 }
 
 .rules-figure img,
-.guide-figure img {
+.guide-figure img,
+.guide-figure--full img {
   width: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 16px;
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
 }
@@ -828,7 +843,14 @@ details.accordion[open] summary::after {
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
 }
 
-/* Картинка на всю доступную ширину блока (без ограничения 720px) */
+/* Картинка на всю доступную ширину блока (без ограничения 720px), но не шире секции */
+.qa-figure.qa-figure--full,
+.qa-final-figure.qa-figure--full {
+  max-width: 100%;
+  overflow: hidden;
+  min-width: 0;
+}
+
 .qa-figure.qa-figure--full img,
 .qa-final-figure.qa-figure--full img {
   max-width: 100%;
@@ -1134,7 +1156,7 @@ details.accordion[open] summary::after {
 
 /* Дополнительный текст под карточкой (на всю ширину карточки) */
 .card-extra {
-  margin-top: 16px;
+  margin-top: 0;
 }
 
 .split-card .card-extra {

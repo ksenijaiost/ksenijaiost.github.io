@@ -71,6 +71,8 @@
               <img src="/assets/path/to/image.jpg" alt="Пример иллюстрации для секции" loading="lazy" />
               <figcaption class="qa-caption">Подпись к изображению</figcaption>
             </figure>
+            <!-- Широкая иллюстрация на всю ширину: <figure class="guide-figure--full"><img ... /></figure> -->
+            <!-- Подпись мелким стилем: <figcaption class="qa-caption note-small">Текст</figcaption> -->
 
             <!-- Выравнивание текста по ширине (опционально) -->
             <div class="text-justify">
@@ -391,6 +393,72 @@
         <img src="/assets/path/to/photo.png" alt="Имя" loading="lazy" />
         <div class="card-extra">
           <p>Со второго абзаца текст на всю ширину карточки (под фото).</p>
+        </div>
+      </article>
+      -->
+
+      <!-- 
+        SPLIT-CARD С СПИСКОМ (ul) И ИНЛАЙН-ПРИМЕЧАНИЕМ В ПУНКТЕ
+        Вместо абзацев — маркированный список. Примечание в пункте — через <span class="note-small">, без переноса строки.
+      -->
+      <!--
+      <article class="split-card">
+        <div>
+          <h3>Заголовок</h3>
+          <p class="split-card-subtitle">подзаголовок</p>
+          <ul>
+            <li>Пункт 1: описание</li>
+            <li>Пункт 2: описание <span class="note-small">(дополнительное примечание в той же строке)</span></li>
+          </ul>
+        </div>
+        <img src="/assets/path/to/photo.png" alt="Описание" loading="lazy" />
+        <div class="card-extra">
+          <p>Дополнительный текст на всю ширину под картинкой.</p>
+        </div>
+      </article>
+      -->
+
+      <!-- 
+        SPLIT-CARD С card-extra: НУМЕРОВАННЫЙ СПИСОК (ol.sublist) + АБЗАЦ
+        В card-extra — нумерованный список и затем абзац. Используется для пошаговых инструкций.
+      -->
+      <!--
+      <article class="split-card">
+        <div>
+          <h3>Заголовок</h3>
+          <p class="split-card-subtitle">подзаголовок</p>
+          <ul>
+            <li>Пункт 1</li>
+            <li>Пункт 2:</li>
+          </ul>
+        </div>
+        <img src="/assets/path/to/photo.png" alt="Описание" loading="lazy" />
+        <div class="card-extra">
+          <ol class="sublist">
+            <li>Шаг 1: описание.</li>
+            <li>Шаг 2: описание <span class="note-small">(примечание в той же строке)</span>.</li>
+          </ol>
+          <p>Итоговый абзац или пояснение.</p>
+        </div>
+      </article>
+      -->
+
+      <!-- 
+        SPLIT-CARD С card-extra: МАРКИРОВАННЫЙ СПИСОК (ul)
+        В card-extra — список пунктов вместо абзаца.
+      -->
+      <!--
+      <article class="split-card">
+        <div>
+          <h2>Заголовок</h2>
+          <p>Основной текст рядом с фото.</p>
+        </div>
+        <img src="/assets/path/to/photo.png" alt="Описание" loading="lazy" />
+        <div class="card-extra">
+          <ul>
+            <li>Дополнительный пункт 1.</li>
+            <li>Дополнительный пункт 2.</li>
+          </ul>
         </div>
       </article>
       -->
