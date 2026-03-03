@@ -1335,6 +1335,27 @@ details.accordion[open] summary::after {
   max-width: 400px;
 }
 
+/* Галерея сбоку от текста (в qa-answer-side-figure) */
+.qa-answer-side-figure .gallery-container,
+.content-side-by-side .gallery-container {
+  margin: 0;
+  max-width: 360px;
+  flex-shrink: 0;
+}
+
+/* Галерея слева, текст справа */
+.qa-answer-side-figure--gallery-left {
+  grid-template-columns: auto 1fr;
+}
+
+.qa-answer-side-figure--gallery-left .qa-answer-side-text {
+  order: 2;
+}
+
+.qa-answer-side-figure--gallery-left .gallery-container {
+  order: 1;
+}
+
 .gallery-slide,
 .diy-gallery-slide {
   display: none;
@@ -1651,6 +1672,16 @@ details.accordion[open] summary::after {
 
   .qa-answer-side-figure {
     grid-template-columns: 1fr;
+  }
+
+  /* На мобилке: текст сверху, галерея снизу */
+  .qa-answer-side-figure--gallery-left .qa-answer-side-text {
+    order: 1;
+  }
+
+  .qa-answer-side-figure--gallery-left .gallery-container {
+    order: 2;
+    max-width: 100%;
   }
 
   /* Картинки в боковых блоках — на всю ширину колонки на мобилке */

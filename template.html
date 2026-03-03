@@ -243,6 +243,35 @@
       -->
 
       <!-- 
+        ГАЛЕРЕЯ СБОКУ ОТ ТЕКСТА (qa-answer-side-figure + gallery-container)
+        Текст слева, галерея справа — уберите --gallery-left.
+        Галерея слева, текст справа — добавьте qa-answer-side-figure--gallery-left.
+      -->
+      <!--
+      <div class="qa-answer-side-figure qa-answer-side-figure--gallery-left">
+        <div class="qa-answer-side-text">
+          <p>Текст рядом с галереей.</p>
+        </div>
+        <div class="gallery-container gallery-container--compact">
+          <div class="gallery-slide">
+            <img src="/assets/path/to/slide1.jpg" alt="Слайд 1" loading="lazy" />
+          </div>
+          <div class="gallery-slide">
+            <img src="/assets/path/to/slide2.jpg" alt="Слайд 2" loading="lazy" />
+          </div>
+          <div class="gallery-nav">
+            <button class="gallery-btn" aria-label="Предыдущий">‹</button>
+            <div class="gallery-dots">
+              <button class="gallery-dot active" aria-label="Слайд 1"></button>
+              <button class="gallery-dot" aria-label="Слайд 2"></button>
+            </div>
+            <button class="gallery-btn" aria-label="Следующий">›</button>
+          </div>
+        </div>
+      </div>
+      -->
+
+      <!-- 
         ГАЛЕРЕЯ С ЛИСТАНИЕМ (пример структуры)
         Раскомментируйте, если нужна галерея с возможностью листать картинки
       -->
@@ -314,6 +343,14 @@
               <img src="/assets/path/to/image.jpg" alt="Описание изображения" loading="lazy" />
               <figcaption class="qa-caption">Подпись к изображению</figcaption>
             </figure>
+          </div>
+        </article>
+      </section>
+      <section class="container qa-grid">
+        <article class="qa-card" id="">
+          <h2></h2>
+          <div class="qa-answer">
+            <p></p>
           </div>
         </article>
       </section>
