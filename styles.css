@@ -975,6 +975,11 @@ details.accordion[open] summary::after {
   max-width: 480px;
 }
 
+/* Очень широкая боковая картинка (для таблиц/скринов с текстом) */
+.qa-answer-side-figure--wide-figure-xxl .qa-figure-side img {
+  max-width: 560px;
+}
+
 /* Картинка в 2 раза уже (аналог gallery-container--compact) */
 .qa-figure.qa-figure--compact img,
 .qa-figure-side.qa-figure--compact img {
