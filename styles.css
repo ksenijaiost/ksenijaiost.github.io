@@ -980,6 +980,15 @@ details.accordion[open] summary::after {
   max-width: 560px;
 }
 
+/* Вариант, где галерея важнее текста: даём ей больше ширины */
+.qa-answer-side-figure--gallery-dominant {
+  grid-template-columns: 3fr 2fr;
+}
+
+.qa-answer-side-figure--gallery-dominant .gallery-container {
+  max-width: 540px;
+}
+
 /* Картинка в 2 раза уже (аналог gallery-container--compact) */
 .qa-figure.qa-figure--compact img,
 .qa-figure-side.qa-figure--compact img {
