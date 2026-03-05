@@ -827,7 +827,7 @@ details.accordion[open] summary::after {
 }
 
 .qa-figure {
-  margin: 16px 0 0;
+  margin: 16px 0 20px;
 }
 
 .qa-final-figure {
@@ -857,7 +857,7 @@ details.accordion[open] summary::after {
 }
 
 .qa-caption {
-  margin-top: 8px;
+  margin-top: 4px;
   font-size: 14px;
   color: var(--muted);
 }
@@ -977,6 +977,15 @@ details.accordion[open] summary::after {
 }
 .qa-figure-side.qa-figure--compact img {
   max-width: 110px;
+}
+
+/* Картинка в 3 раза уже (ещё компактнее) */
+.qa-figure.qa-figure--compact-sm img,
+.qa-figure-side.qa-figure--compact-sm img {
+  max-width: 240px;
+}
+.qa-figure-side.qa-figure--compact-sm img {
+  max-width: 73px;
 }
 
 /* Несколько картинок в ряд (например, виды островов) */
