@@ -970,6 +970,11 @@ details.accordion[open] summary::after {
   max-width: 420px;
 }
 
+/* Галерея сбоку чуть шире (для кейсов, где картинка может занимать до половины карточки) */
+.qa-answer-side-figure--wide-figure .gallery-container {
+  max-width: 480px;
+}
+
 /* Картинка в 2 раза уже (аналог gallery-container--compact) */
 .qa-figure.qa-figure--compact img,
 .qa-figure-side.qa-figure--compact img {
