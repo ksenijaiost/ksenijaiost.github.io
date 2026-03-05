@@ -982,11 +982,11 @@ details.accordion[open] summary::after {
 
 /* Вариант, где галерея важнее текста: даём ей больше ширины */
 .qa-answer-side-figure--gallery-dominant {
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 4fr 2fr;
 }
 
 .qa-answer-side-figure--gallery-dominant .gallery-container {
-  max-width: 540px;
+  max-width: 720px;
 }
 
 /* Картинка в 2 раза уже (аналог gallery-container--compact) */
@@ -1337,6 +1337,63 @@ details.accordion[open] summary::after {
 .items-grids-numbered .items-grid--numbered .item-card > div {
   text-align: center;
   min-width: 0;
+}
+
+/* Сетка для страницы с чек-листами */
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding-top: 8px;
+}
+
+.checklist-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.checklist-card__icon {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.checklist-card__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.checklist-card__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checklist-card__title {
+  font-size: 18px;
+  margin: 0;
+}
+
+.checklist-card__subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.button-small {
+  padding: 8px 16px;
+  font-size: 14px;
 }
 
 /* Универсальная галерея (можно использовать на любой странице) */
