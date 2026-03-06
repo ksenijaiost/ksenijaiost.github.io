@@ -1094,6 +1094,20 @@ details.accordion[open] summary::after {
   text-align: center;
 }
 
+/* Картинка по центру (чек-листы и т.п.) */
+.qa-figure-link--center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.qa-figure-link--center .qa-figure {
+  max-width: 100%;
+}
+.qa-figure-link--center .qa-figure img {
+  width: auto;
+  max-width: 100%;
+}
+
 /* Первая колонка уже, вторая шире (только для ряда из 2 картинок) */
 .qa-figures-row.qa-figures-row-2.qa-figures-row-narrow-first {
   grid-template-columns: 2fr 3fr;
