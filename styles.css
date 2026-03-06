@@ -1066,6 +1066,12 @@ details.accordion[open] summary::after {
   max-height: 560px;
 }
 
+/* Ряд с увеличенными картинками, но с ограничением по высоте (Pocket Camp и подобное) */
+.qa-figures-row.qa-figures-row--medium .qa-figure img {
+  height: auto;
+  max-height: 380px;
+}
+
 /* Ряд с кликабельными картинками (открытие в полном размере) */
 .qa-figure-link {
   display: block;
