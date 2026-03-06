@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
@@ -380,7 +380,8 @@
 
       <!-- 
         Q&A: НЕСКОЛЬКО КАРТИНОК В РЯД (qa-figures-row)
-        qa-figures-row-2 — две в ряд, qa-figures-row-3 — три в ряд. Картинки в ряду одной высоты (260px, crop).
+        qa-figures-row-2 — две в ряд, qa-figures-row-3 — три в ряд. Картинки в ряду одной высоты (260px по умолчанию).
+        qa-figures-row--taller — увеличить макс. высоту картинок до 380px без обрезки (object-fit: contain). Удобно, когда по ширине много пустого места.
         Для двух картинок: qa-figures-row-narrow-first — первая колонка уже (2fr), вторая шире (3fr). На мобильных — в столбик.
       -->
       <!--
@@ -398,6 +399,17 @@
             </figure>
             <figure class="qa-figure">
               <img src="/assets/path/to/3.png" alt="Описание 3" loading="lazy" />
+            </figure>
+          </div>
+          <p>Ряд с увеличенной высотой картинок (до 380px, без обрезки):</p>
+          <div class="qa-figures-row qa-figures-row-2 qa-figures-row--taller">
+            <figure class="qa-figure">
+              <img src="/assets/path/to/1.png" alt="Описание 1" loading="lazy" />
+              <figcaption class="qa-caption">Подпись 1</figcaption>
+            </figure>
+            <figure class="qa-figure">
+              <img src="/assets/path/to/2.png" alt="Описание 2" loading="lazy" />
+              <figcaption class="qa-caption">Подпись 2</figcaption>
             </figure>
           </div>
           <p>Текст после картинок.</p>

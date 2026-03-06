@@ -1047,6 +1047,12 @@ details.accordion[open] summary::after {
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
 }
 
+/* Большая высота картинок в ряду (без обрезки, только выше лимит) */
+.qa-figures-row.qa-figures-row--taller .qa-figure img {
+  height: auto;
+  max-height: 380px;
+}
+
 /* Сдвиг картинки: показывать левую часть, правую обрезать (object-position) */
 .qa-figure--align-left {
   overflow: hidden;
