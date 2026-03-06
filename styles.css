@@ -1296,6 +1296,68 @@ details.accordion[open] summary::after {
   grid-column: 1 / -1;
 }
 
+/* Пошаговый гайд: карточки с номерами, картинка ~70%, текст сбоку. На мобилках — везде картинка сверху, текст снизу */
+.guide-step-list {
+  counter-reset: step;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.guide-step {
+  counter-increment: step;
+  position: relative;
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  gap: 24px;
+  align-items: start;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.guide-step__number {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  z-index: 1;
+}
+
+.guide-step__number::before {
+  content: counter(step);
+}
+
+.guide-step__figure {
+  margin: 0;
+}
+
+.guide-step__figure img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 14px;
+}
+
+.guide-step__text {
+  min-width: 0;
+}
+
+.guide-step__text p {
+  margin: 0;
+}
+
 .card-extra p {
   margin: 0 0 12px;
 }
@@ -1746,8 +1808,12 @@ details.accordion[open] summary::after {
     grid-template-columns: 1fr;
   }
 
+  .split-card,
+  .split-card:nth-child(even) {
+    grid-template-columns: 1fr !important;
+  }
+
   .split-card {
-    grid-template-columns: 1fr;
     padding: 20px;
     gap: 16px;
   }
@@ -1755,6 +1821,20 @@ details.accordion[open] summary::after {
   .split-card img {
     order: -1;
     max-height: 250px;
+  }
+
+  .guide-step {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .guide-step__figure {
+    order: -1;
+  }
+
+  .guide-step__figure img {
+    max-height: 280px;
   }
 
   .split-card h2 {

@@ -246,6 +246,34 @@
       -->
 
       <!-- 
+        ПОШАГОВЫЙ ГАЙД (guide-step-list + guide-step)
+        Карточки с нумерацией: картинка ~70% ширины, текст сбоку. На мобилках — везде картинка сверху, текст снизу.
+        Нумерация автоматическая (CSS counter).
+      -->
+      <!--
+      <div class="guide-step-list">
+        <article class="guide-step">
+          <span class="guide-step__number" aria-hidden="true"></span>
+          <figure class="guide-step__figure">
+            <img src="/assets/path/to/step1.png" alt="Шаг 1" loading="lazy" />
+          </figure>
+          <div class="guide-step__text">
+            <p>Описание действия для шага 1.</p>
+          </div>
+        </article>
+        <article class="guide-step">
+          <span class="guide-step__number" aria-hidden="true"></span>
+          <figure class="guide-step__figure">
+            <img src="/assets/path/to/step2.png" alt="Шаг 2" loading="lazy" />
+          </figure>
+          <div class="guide-step__text">
+            <p>Описание действия для шага 2.</p>
+          </div>
+        </article>
+      </div>
+      -->
+
+      <!-- 
         ГАЛЕРЕЯ СБОКУ ОТ ТЕКСТА (qa-answer-side-figure + gallery-container)
         Текст слева, галерея справа — уберите --gallery-left.
         Галерея слева, текст справа — добавьте qa-answer-side-figure--gallery-left.
