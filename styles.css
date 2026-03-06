@@ -1047,6 +1047,42 @@ details.accordion[open] summary::after {
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
 }
 
+/* Сдвиг картинки: показывать левую часть, правую обрезать (object-position) */
+.qa-figure--align-left {
+  overflow: hidden;
+}
+.qa-figure--align-left img {
+  object-fit: cover;
+  object-position: left center;
+}
+
+/* Сдвиг вправо: показывать правую часть, левую обрезать */
+.qa-figure--align-right {
+  overflow: hidden;
+}
+.qa-figure--align-right img {
+  object-fit: cover;
+  object-position: right center;
+}
+
+/* Лёгкий сдвиг влево (почти по центру, чуть влево) */
+.qa-figure--shift-left {
+  overflow: hidden;
+}
+.qa-figure--shift-left img {
+  object-fit: cover;
+  object-position: 35% center;
+}
+
+/* Лёгкий сдвиг вправо (почти по центру, чуть вправо) */
+.qa-figure--shift-right {
+  overflow: hidden;
+}
+.qa-figure--shift-right img {
+  object-fit: cover;
+  object-position: 65% center;
+}
+
 /* Ряд с картинками на всю ширину колонки, без «воздуха» вокруг */
 .qa-figures-row.qa-figures-row--large .qa-figure img {
   height: auto;
