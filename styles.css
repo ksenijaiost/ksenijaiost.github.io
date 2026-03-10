@@ -2057,3 +2057,15 @@ details.accordion[open] summary::after {
     gap: 8px;
   }
 }
+
+/* Страница инструкции бота: увеличенные картинки (кроме блока «Информация о конкурсе») */
+.page-bot-guide #intro .qa-figure img {
+  max-height: 500px;
+}
+.page-bot-guide .qa-answer-side-figure .qa-figure-side img {
+  max-width: 360px;
+}
+.page-bot-guide #submit_work .qa-figure img {
+  height: auto;
+  max-height: 420px;
+}
