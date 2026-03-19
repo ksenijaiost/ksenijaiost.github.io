@@ -57,6 +57,18 @@
           themeBtn.addEventListener('click', toggleTheme);
         }
       }
+      // После шапки загружаем overlay поиска
+      return fetch(componentsPath + 'search-overlay.html');
+    })
+    .then(response => response.text())
+    .then(html => {
+      document.body.insertAdjacentHTML('beforeend', html);
+      var script = document.createElement('script');
+      script.src = componentsPath + 'search-in-page.js';
+      script.onload = function() {
+        if (typeof window.initSearchInPage === 'function') window.initSearchInPage();
+      };
+      document.body.appendChild(script);
     })
     .catch(err => console.error('Ошибка загрузки шапки:', err));
   
