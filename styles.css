@@ -255,6 +255,17 @@ a:focus {
   z-index: 10;
 }
 
+.site-header::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: linear-gradient(to bottom, rgba(12, 12, 12, 0.4), transparent);
+  pointer-events: none;
+}
+
 .header-content {
   display: flex;
   align-items: center;
@@ -1829,9 +1840,21 @@ details.accordion[open] summary::after {
    Footer
    ============================================ */
 .site-footer {
+  position: relative;
   background: #111;
   color: #e5e7eb;
   padding: 30px 0;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: linear-gradient(to bottom, transparent, rgba(17, 17, 17, 0.6));
+  pointer-events: none;
 }
 
 .footer-content {
