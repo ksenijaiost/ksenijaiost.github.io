@@ -1,5 +1,39 @@
-// Простой скрипт для загрузки шапки и подвала
+// Простой скрипт для загрузки шапки, подвала и темы
 (function() {
+  // Тема: применяем сразу, чтобы минимизировать мигание
+  (function initTheme() {
+    var saved = localStorage.getItem('acnh-theme');
+    var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+
+  function getTheme() {
+    return document.documentElement.getAttribute('data-theme') || 'light';
+  }
+
+  function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('acnh-theme', theme);
+  }
+
+  function toggleTheme() {
+    var next = getTheme() === 'dark' ? 'light' : 'dark';
+    setTheme(next);
+    updateThemeToggleUI();
+  }
+
+  function updateThemeToggleUI() {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var icon = btn.querySelector('.theme-toggle-icon');
+    var isDark = getTheme() === 'dark';
+    if (icon) {
+      icon.textContent = isDark ? '☀' : '☽';
+    }
+    btn.setAttribute('aria-label', isDark ? 'Переключить светлую тему' : 'Переключить тёмную тему');
+    btn.setAttribute('title', isDark ? 'Светлая тема' : 'Тёмная тема');
+  }
+
   // Используем абсолютные пути от корня
   const componentsPath = '/components/';
   
@@ -15,6 +49,12 @@
         const homeLink = document.getElementById('header-home-link');
         if (homeLink && (currentPath === '/' || currentPath.endsWith('/index.html'))) {
           homeLink.setAttribute('aria-current', 'page');
+        }
+        // Инициализируем переключатель темы
+        updateThemeToggleUI();
+        var themeBtn = document.getElementById('theme-toggle');
+        if (themeBtn) {
+          themeBtn.addEventListener('click', toggleTheme);
         }
       }
     })

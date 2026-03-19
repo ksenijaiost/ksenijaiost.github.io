@@ -8,7 +8,7 @@
    ============================================ */
 :root {
   color-scheme: light;
-  --bg: #f3f4f6;
+  --bg: #e6e6fa;
   --panel: #cfeee0;
   --panel-alt: #ffffff;
   --dark: #0c0c0c;
@@ -19,17 +19,151 @@
   --border: #e5e7eb;
   scroll-padding-top: 110px;
   
-  /* Page-specific background colors */
-  --bg-newspaper: #dff5ff;
-  --bg-contest: #d8d4eb;
-  --bg-qa: #ecffea;
-  --bg-terminology: #fff5d4;
+  /* Единый фон для всех страниц */
+  --bg-newspaper: #e6e6fa;
+  --bg-contest: #e6e6fa;
+  --bg-qa: #e6e6fa;
+  --bg-terminology: #e6e6fa;
   
   /* Card colors */
   --card-newspaper: #f5f5f5;
   --card-contest: #c9c2e9;
   --card-contest-alt: #aca0ef;
   --card-qa: #f8f2cb;
+}
+
+/* Тёмная тема */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0a0012;
+  --panel: #2d2d2d;
+  --panel-alt: #252525;
+  --text: #d5d5d5;
+  --muted: #9ca3af;
+  --accent: #34d399;
+  --accent-dark: #10b981;
+  --border: #374151;
+
+  /* Единый фон для всех страниц */
+  --bg-newspaper: #0a0012;
+  --bg-contest: #0a0012;
+  --bg-qa: #0a0012;
+  --bg-terminology: #0a0012;
+
+  --card-newspaper: #252f3d;
+  --card-contest: #352e4a;
+  --card-contest-alt: #423a5a;
+  --card-qa: #2a352a;
+  --panel-nested: #383838;
+}
+
+/* Hero в тёмной теме: тёмный overlay и светлый текст */
+[data-theme="dark"] .hero::before {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+/* hero-no-overlay и hero-light-overlay: в тёмной теме показываем тёмный overlay */
+[data-theme="dark"] .hero-no-overlay::before {
+  display: block !important;
+  background: rgba(0, 0, 0, 0.65) !important;
+}
+
+[data-theme="dark"] .hero-light-overlay::before {
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
+[data-theme="dark"] .hero,
+[data-theme="dark"] .hero-content {
+  color: #dcdcdc !important;
+}
+
+[data-theme="dark"] .hero .eyebrow,
+[data-theme="dark"] .hero h1,
+[data-theme="dark"] .hero p {
+  color: #dcdcdc !important;
+}
+
+[data-theme="dark"] .hero .lead {
+  color: #d0d0d0 !important;
+}
+
+[data-theme="dark"] .hero .back-link {
+  color: var(--accent) !important;
+  border-bottom-color: rgba(52, 211, 153, 0.5) !important;
+}
+
+[data-theme="dark"] .hero .back-link:hover {
+  color: var(--accent) !important;
+  border-bottom-color: var(--accent) !important;
+}
+
+/* Аккордеон в тёмной теме */
+[data-theme="dark"] details.accordion {
+  background: #252525;
+  border-color: var(--border);
+}
+
+[data-theme="dark"] details.accordion[open] {
+  background: #2d3748;
+  border-color: var(--accent);
+}
+
+/* Таблицы: чередование строк */
+[data-theme="dark"] .content-table.content-table-data tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Кнопка «Наверх» в тёмной теме — тень посильнее */
+[data-theme="dark"] .back-to-top {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Вложенные карточки — тёмный фон в тёмной теме */
+[data-theme="dark"] .inner-card {
+  background: var(--panel-nested);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .term-card,
+[data-theme="dark"] .term-card:nth-child(even) {
+  background: var(--panel-nested);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .split-card,
+[data-theme="dark"] .split-card:nth-child(even) {
+  background: var(--panel-nested);
+}
+
+[data-theme="dark"] .item-card,
+[data-theme="dark"] .star-shard-item {
+  background: var(--panel-nested);
+}
+
+[data-theme="dark"] .checklist-card {
+  background: var(--panel-nested);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .item-card,
+[data-theme="dark"] .star-shard-item {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .split-card,
+[data-theme="dark"] .split-card:nth-child(even) {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .gallery-slide,
+[data-theme="dark"] .diy-gallery-slide {
+  background: var(--panel-nested);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .guide-step {
+  background: var(--panel-nested);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
  
 /* ============================================
@@ -157,6 +291,33 @@ a:focus {
 
 .nav a[aria-current="page"] {
   color: #cfeee0;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid #cfeee0;
+  outline-offset: 2px;
 }
  
 /* ============================================
@@ -1737,7 +1898,7 @@ details.accordion[open] summary::after {
 }
 
 .muted {
-  color: #9ca3af;
+  color: var(--muted);
 }
 
 /* ============================================
