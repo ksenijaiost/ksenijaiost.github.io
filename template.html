@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Название страницы — ACNH Guides</title>
+    <meta name="description" content="Описание страницы для поисковых систем" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- Плейсхолдер для шапки (загружается автоматически) -->
+    <div id="header-placeholder"></div>
+
+    <main id="content">
+      <!-- 
+        HERO СЕКЦИЯ
+        Варианты использования:
+        
+        1. Стандартная hero с фоном:
+        <section class="hero" style="background-image: url('путь/к/изображению.jpg');">
+        
+        2. Hero с цветным фоном (для разных страниц):
+        <section class="hero hero-compact hero-bg-qa">
+          (доступны: hero-bg-newspaper, hero-bg-contest, hero-bg-qa, hero-bg-terminology)
+        
+        3. Hero по центру:
+        <section class="hero hero-compact hero-centered hero-bg-terminology">
+        
+        4. Hero с тёмным оверлеем и белым текстом (для тёмных фонов):
+        <section class="hero hero-compact hero-centered hero-dark" style="background-image: url('...');">
+        
+        5. Hero без оверлея (картинка видна полностью):
+        <section class="hero hero-no-overlay" style="background-image: url('...');">
+      -->
+      <section class="hero hero-compact hero-centered hero-bg-qa" style="background-image: url('/assets/background/acnh_leaf_coral.png');">
+      <!-- <section class="hero hero-centered hero-dark" style="background-image: url('/assets/background/achievements.jpg');"> -->
+        <div class="container hero-content">
+          <p class="eyebrow">Animal Crossing New Horizon Guide</p>
+          <h1>Заголовок страницы</h1>
+          <p>
+            Описание или вводный текст страницы. Можно использовать несколько параграфов.
+          </p>
+          <a class="back-link" href="/">← На главную</a>
+        </div>
+      </section>
+
+      <!-- 
+        ОСНОВНОЙ КОНТЕНТ
+        Используйте section-grid для списка карточек или обычные секции для текста
+      -->
+      <section class="container section-grid">
+        <article class="section-card">
+          <h2>Заголовок секции</h2>
+          <div class="section-body">
+            <p>Текст контента. Можно использовать:</p>
+            <ul>
+              <li>Списки</li>
+              <li>Ссылки: <a href="#">пример ссылки</a></li>
+              <li>Жирный текст: <strong>важная информация</strong></li>
+              <li>Курсив: <em>дополнительная информация</em></li>
+            </ul>
+            
+            <!-- Вложенные списки -->
+            <ul class="sublist">
+              <li>Вложенный пункт 1</li>
+              <li>Вложенный пункт 2</li>
+            </ul>
+
+            <!-- Пример широкой иллюстрации -->
+            <figure class="guide-figure">
+              <img src="/assets/path/to/image.jpg" alt="Пример иллюстрации для секции" loading="lazy" />
+              <figcaption class="qa-caption">Подпись к изображению</figcaption>
+            </figure>
+            <!-- Широкая иллюстрация на всю ширину: <figure class="guide-figure guide-figure--full"><img ... /></figure> -->
+            <!-- Картинка в 2 раза уже: <figure class="qa-figure qa-figure--compact"><img ... /></figure> -->
+            <!-- Картинка в 3 раза уже: <figure class="qa-figure qa-figure--compact-sm"><img ... /></figure> -->
+            <!-- Подпись мелким стилем: <figcaption class="qa-caption note-small">Текст</figcaption> -->
+
+            <!-- Картинка из /assets/checklists/ с возможностью открыть в полном размере -->
+            <!--
+            <a href="/assets/checklists/example.png" target="_blank" rel="noopener" class="qa-figure-link" title="Открыть в полном размере">
+              <figure class="qa-figure">
+                <img src="/assets/checklists/example.png" alt="Описание чек-листа" loading="lazy" />
+              </figure>
+              <p class="qa-figure-expand-hint">Нажмите, чтобы открыть в полном размере</p>
+            </a>
+            -->
+            <!-- class="qa-figure-link qa-figure-link--center" - чтобы картинка была по центру -->
+
+            <!-- Выравнивание текста по ширине (опционально) -->
+            <div class="text-justify">
+              <p>Текст в таком блоке будет выровнен по ширине.</p>
+            </div>
+
+            <!-- Пример сноски под текстом -->
+            <p class="muted note-small">
+              Пример сноски небольшим серым текстом. Можно использовать для пояснений и источников.
+            </p>
+          </div>
+        </article>
+
+        <!-- Еще одна карточка -->
+        <article class="section-card">
+          <h2>Другая секция</h2>
+          <div class="section-body">
+            <p>Контент другой секции.</p>
+            <div class="content-side-by-side">
+              <div class="content-side-text">
+                <p>Текст с одной стороны.</p>
+                <ol>
+                  <li>Пункт списка 1</li>
+                  <li>Пункт списка 2</li>
+                </ol>
+              </div>
+              <figure class="guide-figure content-side-figure">
+                <img src="/assets/path/to/image.png" alt="Описание" loading="lazy" />
+              </figure>
+            </div>
+          </div>
+        </article>
+        <article class="section-card">
+          <h2>Другая секция</h2>
+          <div class="section-body">
+            <p>Контент другой секции.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="container section-grid">
+        <article class="section-card">
+          <h2>Другая секция</h2>
+          <div class="section-body">
+            <p>Контент другой секции.</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- 
+        АККОРДЕОН (раскрывающиеся блоки)
+        Можно использовать для расшифровок, FAQ, длинных текстов
+      -->
+      <!--
+      <section class="container section-grid">
+        <article class="section-card">
+          <h2>Пример аккордеона</h2>
+          <div class="section-body">
+            <details class="accordion">
+              <summary>Заголовок раскрывающегося блока</summary>
+              <div class="accordion-content">
+                <p>Текст, который показывается при раскрытии. Можно использовать списки, ссылки и т.д.</p>
+              </div>
+            </details>
+
+            <details class="accordion">
+              <summary>Ещё один блок</summary>
+              <div class="accordion-content">
+                <p>Здесь может быть другой текст.</p>
+              </div>
+            </details>
+          </div>
+        </article>
+      </section>
+      -->
+
+      <!-- 
+        АККОРДЕОН С КАРТИНКОЙ СБОКУ (content-side-by-side внутри details)
+        Текст слева, иллюстрация справа. Классы content-side-by-side, content-side-text, content-side-figure. На узких экранах — в одну колонку.
+      -->
+      <!--
+      <details class="accordion">
+        <summary>Заголовок блока</summary>
+        <div class="accordion-content">
+          <div class="content-side-by-side">
+            <div class="content-side-text">
+              <p>Вступительный текст.</p>
+              <ol>
+                <li>Пункт списка 1</li>
+                <li>Пункт списка 2</li>
+              </ol>
+            </div>
+            <figure class="guide-figure content-side-figure">
+              <img src="/assets/path/to/image.png" alt="Описание" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </details>
+      -->
+
+      <!-- 
+        ШИРОКИЕ КАРТОЧКИ (split-card)
+        Сетка: фото справа (или слева у чётных), текст слева. Для списка персонажей, типов островов и т.п.
+      -->
+      <!--
+      <section class="container section-grid">
+        <h2>Заголовок списка</h2>
+        <div class="split-card-list">
+          <article class="split-card">
+            <div>
+              <h2>Имя персонажа</h2>
+              <p class="split-card-subtitle">Краткое описание</p>
+              <p>Полное описание. Может быть несколько абзацев.</p>
+            </div>
+            <img src="/assets/path/to/character.png" alt="Имя персонажа" loading="lazy" />
+          </article>
+        </div>
+      </section>
+      -->
+
+      <!-- 
+        СЕТКА ПРЕДМЕТОВ (items-grid + item-card)
+        Карточки с иконкой слева и текстом. Классы для колонок: items-row-3 (3 в ряд), items-row-2, items-row-1.
+      -->
+      <!--
+      <div class="items-grid items-row-3">
+        <article class="item-card">
+          <img src="/assets/path/to/icon.png" alt="" loading="lazy" />
+          <div>
+            <h3>Название предмета</h3>
+            <p>Краткое описание.</p>
+          </div>
+        </article>
+      </div>
+      -->
+
+      <!--
+        ВНУТРЕННИЕ КАРТОЧКИ ВНУТРИ КАРТОЧКИ (inner-card-list + inner-card)
+        Универсальный паттерн: блок с заголовком и текстом, а внутри — несколько «подкарточек» с подзаголовками.
+      -->
+      <!--
+      <article class="qa-card">
+        <h3>Большой вопрос / раздел</h3>
+        <p>Вступительный текст, который относится ко всем подблокам ниже.</p>
+
+        <div class="inner-card-list">
+          <div class="qa-answer inner-card">
+            <h4>Подкарточка 1</h4>
+            <p>Краткое описание первой плюшки / подпункта.</p>
+          </div>
+
+          <div class="qa-answer inner-card">
+            <h4>Подкарточка 2</h4>
+            <p>Краткое описание второй плюшки / подпункта.</p>
+          </div>
+        </div>
+      </article>
+      -->
+
+      <!-- 
+        ПОШАГОВЫЙ ГАЙД (guide-step-list + guide-step)
+        Карточки с нумерацией: картинка ~70% ширины, текст сбоку. На мобилках — везде картинка сверху, текст снизу.
+        Нумерация автоматическая (CSS counter).
+      -->
+      <!--
+      <div class="guide-step-list">
+        <article class="guide-step">
+          <span class="guide-step__number" aria-hidden="true"></span>
+          <figure class="guide-step__figure">
+            <img src="/assets/path/to/step1.png" alt="Шаг 1" loading="lazy" />
+          </figure>
+          <div class="guide-step__text">
+            <p>Описание действия для шага 1.</p>
+          </div>
+        </article>
+        <article class="guide-step">
+          <span class="guide-step__number" aria-hidden="true"></span>
+          <figure class="guide-step__figure">
+            <img src="/assets/path/to/step2.png" alt="Шаг 2" loading="lazy" />
+          </figure>
+          <div class="guide-step__text">
+            <p>Описание действия для шага 2.</p>
+          </div>
+        </article>
+      </div>
+      -->
+
+      <!-- 
+        ГАЛЕРЕЯ СБОКУ ОТ ТЕКСТА (qa-answer-side-figure + gallery-container)
+        Текст слева, галерея справа — уберите --gallery-left.
+        Галерея слева, текст справа — добавьте qa-answer-side-figure--gallery-left.
+      -->
+      <!--
+      <div class="qa-answer-side-figure qa-answer-side-figure--gallery-left">
+        <div class="qa-answer-side-text">
+          <p>Текст рядом с галереей.</p>
+        </div>
+        <div class="gallery-container gallery-container--compact">
+          <div class="gallery-slide">
+            <img src="/assets/path/to/slide1.jpg" alt="Слайд 1" loading="lazy" />
+          </div>
+          <div class="gallery-slide">
+            <img src="/assets/path/to/slide2.jpg" alt="Слайд 2" loading="lazy" />
+          </div>
+          <div class="gallery-nav">
+            <button class="gallery-btn" aria-label="Предыдущий">‹</button>
+            <!-- Точки генерирует gallery.js по числу .gallery-slide; контейнер можно оставить пустым -->
+            <div class="gallery-dots"></div>
+            <button class="gallery-btn" aria-label="Следующий">›</button>
+          </div>
+        </div>
+      </div>
+      -->
+
+      <!-- 
+        ГАЛЕРЕЯ С ЛИСТАНИЕМ (пример структуры)
+        Раскомментируйте, если нужна галерея с возможностью листать картинки
+      -->
+      <!--
+      <section class="container image-gallery">
+        <h2>Заголовок галереи</h2>
+        <p style="text-align: center; margin-bottom: 30px;">
+          Описание галереи (опционально).
+        </p>
+
+        <div class="gallery-container">
+          <!-- Слайд 1 -->
+          <div class="gallery-slide">
+            <img src="/assets/path/to/image1.jpg" alt="Описание 1" loading="lazy" />
+            <h3>Название первого слайда</h3>
+          </div>
+
+          <!-- Слайд 2 -->
+          <div class="gallery-slide">
+            <img src="/assets/path/to/image2.jpg" alt="Описание 2" loading="lazy" />
+            <h3>Название второго слайда</h3>
+          </div>
+
+          <!-- Слайд 3 -->
+          <div class="gallery-slide">
+            <img src="/assets/path/to/image3.jpg" alt="Описание 3" loading="lazy" />
+            <h3>Название третьего слайда</h3>
+          </div>
+
+          <!-- Навигация -->
+          <div class="gallery-nav">
+            <button class="gallery-btn" aria-label="Предыдущий">‹</button>
+            <div class="gallery-dots"></div>
+            <button class="gallery-btn" aria-label="Следующий">›</button>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- 
+        ДЛЯ Q&A СТРАНИЦ (пример структуры)
+        Раскомментируйте, если создаете страницу с вопросами-ответами
+      -->
+      <!--
+      <section class="qa-preface">
+        <div class="container section-grid">
+          <article class="section-card qa-preface-card">
+            <p><strong>ОГЛАВЛЕНИЕ:</strong></p>
+            <ol class="qa-toc">
+              <li><a href="#question1">Первый вопрос</a></li>
+              <li><a href="#question2">Второй вопрос</a></li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <section class="container qa-grid">
+        <h2>Вопросы</h2>
+
+        <article class="qa-card" id="question1">
+          <h3>Первый вопрос?</h3>
+          <div class="qa-answer">
+            <p>Ответ на вопрос.</p>
+            <figure class="qa-figure">
+              <img src="/assets/path/to/image.jpg" alt="Описание изображения" loading="lazy" />
+              <figcaption class="qa-caption">Подпись к изображению</figcaption>
+            </figure>
+          </div>
+        </article>
+      </section>
+      <section class="container qa-grid">
+        <article class="qa-card" id="">
+          <h2></h2>
+          <div class="qa-answer">
+            <p></p>
+          </div>
+        </article>
+      </section>
+      -->
+
+      <!-- 
+        Q&A: ТЕКСТ СЛЕВА, МАЛЕНЬКАЯ КАРТИНКА СПРАВА (qa-answer-side-figure)
+        Как в блоке про Брюстера, ипотеку, гироиды. На мобильных — в одну колонку (текст сверху, картинка снизу).
+      -->
+      <!--
+      <article class="qa-card" id="example-side">
+        <h3>Заголовок вопроса</h3>
+        <div class="qa-answer">
+          <div class="qa-answer-side-figure">
+            <div class="qa-answer-side-text">
+              <p>Текст вопроса. Списки, ссылки — как обычно.</p>
+              <ul>
+                <li>Пункт 1</li>
+                <li>Пункт 2</li>
+              </ul>
+            </div>
+            <figure class="qa-figure qa-figure-side">
+              <img src="/assets/path/to/image.png" alt="Описание" loading="lazy" />
+              <figcaption class="qa-caption">Подпись к картинке</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+      -->
+
+      <!-- 
+        Q&A: НЕСКОЛЬКО КАРТИНОК В РЯД (qa-figures-row)
+        qa-figures-row-2 — две в ряд, qa-figures-row-3 — три в ряд. Картинки в ряду одной высоты (260px по умолчанию).
+        qa-figures-row--taller — увеличить макс. высоту картинок до 380px без обрезки (object-fit: contain). Удобно, когда по ширине много пустого места.
+        Для двух картинок: qa-figures-row-narrow-first — первая колонка уже (2fr), вторая шире (3fr). На мобильных — в столбик.
+      -->
+      <!--
+      <article class="qa-card" id="example-row">
+        <h3>Заголовок с картинками в ряд</h3>
+        <div class="qa-answer">
+          <p>Текст перед картинками.</p>
+          <div class="qa-figures-row qa-figures-row-3">
+            <figure class="qa-figure">
+              <img src="/assets/path/to/1.png" alt="Описание 1" loading="lazy" />
+              <figcaption class="qa-caption">Подпись 1</figcaption>
+            </figure>
+            <figure class="qa-figure">
+              <img src="/assets/path/to/2.png" alt="Описание 2" loading="lazy" />
+            </figure>
+            <figure class="qa-figure">
+              <img src="/assets/path/to/3.png" alt="Описание 3" loading="lazy" />
+            </figure>
+          </div>
+          <p>Ряд с увеличенной высотой картинок (до 380px, без обрезки):</p>
+          <div class="qa-figures-row qa-figures-row-2 qa-figures-row--taller">
+            <figure class="qa-figure">
+              <img src="/assets/path/to/1.png" alt="Описание 1" loading="lazy" />
+              <figcaption class="qa-caption">Подпись 1</figcaption>
+            </figure>
+            <figure class="qa-figure">
+              <img src="/assets/path/to/2.png" alt="Описание 2" loading="lazy" />
+              <figcaption class="qa-caption">Подпись 2</figcaption>
+            </figure>
+          </div>
+          <p>Текст после картинок.</p>
+        </div>
+      </article>
+      -->
+
+      <!-- 
+        Q&A: ПОДЗАГОЛОВОК (h4) И ПРИМЕЧАНИЕ (qa-note)
+        Внутри одной qa-card можно несколько блоков qa-answer и подзаголовки.
+      -->
+      <!--
+      <article class="qa-card" id="example-note">
+        <h3>Вопрос с подпунктами</h3>
+        <div class="qa-answer">
+          <p>Основной текст.</p>
+          <p class="qa-note">Примечание мелким стилем (например: «Хорошо, что без процентов!»).</p>
+        </div>
+        <div class="qa-answer">
+          <h4>Подзаголовок внутри карточки</h4>
+          <p>Текст подпункта.</p>
+        </div>
+      </article>
+      -->
+
+      <!-- 
+        КАРТОЧКА С ДОПОЛНИТЕЛЬНЫМ ТЕКСТОМ НА ВСЮ ШИРИНУ (split-card + card-extra)
+        Как на странице Селесты: первый абзац рядом с фото, остальное — под картинкой на всю ширину.
+      -->
+      <!--
+      <article class="split-card">
+        <div>
+          <h2>Имя</h2>
+          <p class="split-card-subtitle">Краткое описание</p>
+          <p>Первый абзац — рядом с фото.</p>
+        </div>
+        <img src="/assets/path/to/photo.png" alt="Имя" loading="lazy" />
+        <div class="card-extra">
+          <p>Со второго абзаца текст на всю ширину карточки (под фото).</p>
+        </div>
+      </article>
+      -->
+
+      <!-- 
+        SPLIT-CARD С СПИСКОМ (ul) И ИНЛАЙН-ПРИМЕЧАНИЕМ В ПУНКТЕ
+        Вместо абзацев — маркированный список. Примечание в пункте — через <span class="note-small">, без переноса строки.
+      -->
+      <!--
+      <article class="split-card">
+        <div>
+          <h3>Заголовок</h3>
+          <p class="split-card-subtitle">подзаголовок</p>
+          <ul>
+            <li>Пункт 1: описание</li>
+            <li>Пункт 2: описание <span class="note-small">(дополнительное примечание в той же строке)</span></li>
+          </ul>
+        </div>
+        <img src="/assets/path/to/photo.png" alt="Описание" loading="lazy" />
+        <div class="card-extra">
+          <p>Дополнительный текст на всю ширину под картинкой.</p>
+        </div>
+      </article>
+      -->
+
+      <!-- 
+        SPLIT-CARD С card-extra: НУМЕРОВАННЫЙ СПИСОК (ol.sublist) + АБЗАЦ
+        В card-extra — нумерованный список и затем абзац. Используется для пошаговых инструкций.
+      -->
+      <!--
+      <article class="split-card">
+        <div>
+          <h3>Заголовок</h3>
+          <p class="split-card-subtitle">подзаголовок</p>
+          <ul>
+            <li>Пункт 1</li>
+            <li>Пункт 2:</li>
+          </ul>
+        </div>
+        <img src="/assets/path/to/photo.png" alt="Описание" loading="lazy" />
+        <div class="card-extra">
+          <ol class="sublist">
+            <li>Шаг 1: описание.</li>
+            <li>Шаг 2: описание <span class="note-small">(примечание в той же строке)</span>.</li>
+          </ol>
+          <p>Итоговый абзац или пояснение.</p>
+        </div>
+      </article>
+      -->
+
+      <!-- 
+        SPLIT-CARD С card-extra: МАРКИРОВАННЫЙ СПИСОК (ul)
+        В card-extra — список пунктов вместо абзаца.
+      -->
+      <!--
+      <article class="split-card">
+        <div>
+          <h2>Заголовок</h2>
+          <p>Основной текст рядом с фото.</p>
+        </div>
+        <img src="/assets/path/to/photo.png" alt="Описание" loading="lazy" />
+        <div class="card-extra">
+          <ul>
+            <li>Дополнительный пункт 1.</li>
+            <li>Дополнительный пункт 2.</li>
+          </ul>
+        </div>
+      </article>
+      -->
+
+      <!-- 
+        ТАБЛИЦА В КАРТОЧКЕ (table-wrapper + content-table)
+        Класс content-table-data — центрирование колонок 2–3 и последней, затемнение чётных строк. На мобильных — горизонтальный скролл.
+      -->
+      <!--
+      <article class="section-card">
+        <h2>Заголовок таблицы</h2>
+        <div class="section-body">
+          <p>Поясняющий текст перед таблицей (по желанию).</p>
+          <div class="table-wrapper">
+            <table class="content-table content-table-data">
+              <thead>
+                <tr>
+                  <th>Способ</th>
+                  <th>★3</th>
+                  <th>★5</th>
+                  <th>Приоритет</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Первый способ</td>
+                  <td>значение</td>
+                  <td>значение</td>
+                  <td>★★★★★</td>
+                </tr>
+                <tr>
+                  <td>Второй способ</td>
+                  <td>значение</td>
+                  <td>значение</td>
+                  <td>★★★★☆</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </article>
+      -->
+    </main>
+
+    <!-- Плейсхолдер для подвала (загружается автоматически) -->
+    <div id="footer-placeholder"></div>
+    <script src="/components/load-components.js"></script>
+    <!-- Подключите gallery.js, если используете галерею на странице -->
+    <!-- <script src="/components/gallery.js"></script> -->
+  </body>
+</html>

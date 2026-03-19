@@ -1,0 +1,2071 @@
+/* ============================================
+   Google Fonts
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+
+/* ============================================
+   CSS Variables (Design Tokens)
+   ============================================ */
+:root {
+  color-scheme: light;
+  --bg: #f3f4f6;
+  --panel: #cfeee0;
+  --panel-alt: #ffffff;
+  --dark: #0c0c0c;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --accent: #1f7a4d;
+  --accent-dark: #145a36;
+  --border: #e5e7eb;
+  scroll-padding-top: 110px;
+  
+  /* Page-specific background colors */
+  --bg-newspaper: #dff5ff;
+  --bg-contest: #d8d4eb;
+  --bg-qa: #ecffea;
+  --bg-terminology: #fff5d4;
+  
+  /* Card colors */
+  --card-newspaper: #f5f5f5;
+  --card-contest: #c9c2e9;
+  --card-contest-alt: #aca0ef;
+  --card-qa: #f8f2cb;
+}
+ 
+/* ============================================
+   Reset & Base Styles
+   ============================================ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Balsamiq Sans", cursive;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+[id] {
+  scroll-margin-top: 110px;
+}
+
+/* Списки по всему сайту: отступ слева в 2 раза меньше типичного */
+ul, ol {
+  padding-left: 1.25em;
+}
+
+ul ul, ol ol, ul ol, ol ul,
+.sublist {
+  padding-left: 1.25em;
+}
+ 
+/* ============================================
+   Typography & Links
+   ============================================ */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-dark);
+  border-bottom-color: currentColor;
+}
+
+/* Утилита для выравнивания текста по ширине */
+.text-justify,
+.text-justify p {
+  text-align: justify;
+  text-align-last: left;
+}
+
+/* ============================================
+   Layout
+   ============================================ */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+ 
+/* ============================================
+   Accessibility
+   ============================================ */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: #111;
+  color: #fff;
+  padding: 8px 12px;
+}
+
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+  z-index: 100;
+}
+
+/* ============================================
+   Header
+   ============================================ */
+.site-header {
+  background: rgba(12, 12, 12, 0.95);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0;
+  flex-wrap: wrap;
+}
+
+.brand-title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.brand-subtitle {
+  font-size: 12px;
+  color: #d1d5db;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: none;
+  padding: 6px 0;
+}
+
+.nav a[aria-current="page"] {
+  color: #cfeee0;
+}
+ 
+/* ============================================
+   Hero Section (Base)
+   ============================================ */
+.hero {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  color: #1f2937;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.72);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+
+.hero-content p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Для hero с темным фоном заменяем светлый overlay на темный */
+.hero-dark::before {
+  background: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Для hero с легким overlay (чтобы картинка была лучше видна) */
+.hero-light-overlay::before {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Для hero без overlay (чтобы картинка была полностью видна) */
+.hero-no-overlay::before {
+  display: none;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin: 12px 0;
+}
+
+.lead {
+  font-size: 20px;
+  max-width: 720px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+/* Hero variants */
+.hero-compact {
+  padding: 90px 0 40px;
+}
+
+.hero-compact h1 {
+  font-size: 36px;
+}
+
+.hero-centered .hero-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-centered h1 {
+  text-align: center;
+}
+
+.hero-centered p {
+  text-align: center;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+.hero-centered .lead {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Hero с темным overlay и белым текстом - переопределяем светлый overlay */
+
+.hero-dark {
+  color: #fff !important;
+}
+
+.hero-dark .hero-content {
+  color: #fff !important;
+}
+
+.hero-dark .eyebrow {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.hero-dark h1 {
+  color: #fff !important;
+}
+
+.hero-dark p {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.hero-dark .back-link {
+  color: #fff !important;
+  border-bottom-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.hero-dark .back-link:hover {
+  color: #fff !important;
+  border-bottom-color: #fff !important;
+}
+
+/* Page-specific hero backgrounds */
+.hero-bg-newspaper {
+  background-color: var(--bg-newspaper);
+}
+
+.hero-bg-contest {
+  background-color: var(--bg-contest);
+}
+
+.hero-bg-qa {
+  background-color: var(--bg-qa);
+}
+
+.hero-bg-terminology {
+  background-color: var(--bg-terminology);
+  padding: 60px 0 20px;
+}
+
+/* Back link */
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 16px;
+}
+ 
+/* ============================================
+   Buttons
+   ============================================ */
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  border: 2px solid var(--accent);
+}
+
+.button:hover,
+.button:focus {
+  color: #fff;
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--accent);
+}
+ 
+/* ============================================
+   Content Sections
+   ============================================ */
+.section-grid {
+  display: grid;
+  gap: 24px;
+  padding: 40px 0 60px;
+}
+
+/* Более компактный вертикальный отступ для секции */
+.section-grid.section-grid--compact {
+  padding: 24px 0 32px;
+}
+
+.section-card {
+  background: var(--panel);
+  border-radius: 18px;
+  padding: 24px 28px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.section-card h2 {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+.section-card ul {
+  margin: 4px 0 8px 20px;
+}
+
+.section-card .sublist {
+  margin-top: 5px;
+  margin-left: 12px;
+  padding-left: 0.75em;
+}
+
+.section-card li {
+  margin: 3px 0;
+}
+
+.section-card p {
+  margin: 8px 0;
+}
+
+/* Таблицы в контенте */
+.table-wrapper {
+  overflow-x: auto;
+  margin: 16px 0;
+  border-radius: 12px;
+  border: 1px solid var(--border, #e5e7eb);
+}
+.content-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+.content-table th,
+.content-table td {
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border, #e5e7eb);
+}
+.content-table th {
+  background: var(--panel-alt, #f3f4f6);
+  font-weight: 600;
+}
+.content-table tbody tr:last-child td {
+  border-bottom: none;
+}
+/* Модификатор для таблиц с данными: центрирование колонок 2–3 и последней, чередование фона строк */
+.content-table.content-table-data th:nth-child(2),
+.content-table.content-table-data th:nth-child(3),
+.content-table.content-table-data td:nth-child(2),
+.content-table.content-table-data td:nth-child(3) {
+  text-align: center;
+}
+.content-table.content-table-data td:last-child {
+  text-align: center;
+  white-space: nowrap;
+}
+.content-table.content-table-data tbody tr:nth-child(even) {
+  background: var(--table-row-alt, rgba(0, 0, 0, 0.03));
+}
+.content-table.content-table-data tbody tr:nth-child(even) td {
+  border-bottom-color: var(--border, #e5e7eb);
+}
+
+/* Небольшие сноски/примечания под текстом */
+.note-small {
+  font-size: 13px;
+  margin-top: 16px;
+}
+
+/* Инлайн-примечание в списке (без отступа) */
+li .note-small,
+li span.note-small {
+  margin: 0;
+  font-size: 0.9em;
+  color: var(--muted);
+}
+ 
+/* Аккордеон внутри карточек (раскрывающиеся блоки) */
+details.accordion {
+  background: #f9fafb;
+  border-radius: 14px;
+  padding: 12px 16px;
+  margin: 10px 0;
+  border: 1px solid #e5e7eb;
+}
+
+details.accordion + details.accordion {
+  margin-top: 8px;
+}
+
+details.accordion summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+details.accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+details.accordion[open] {
+  background: #eef2ff;
+  border-color: #c7d2fe;
+}
+
+details.accordion summary::after {
+  content: "▾";
+  font-size: 14px;
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+
+details.accordion[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+/* Текст и картинка рядом (в карточке или внутри аккордеона): текст до картинки, картинка прижата к правому краю */
+.content-side-by-side {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: start;
+}
+
+.content-side-by-side .content-side-text {
+  min-width: 0;
+}
+
+.content-side-by-side .content-side-figure {
+  margin: 0;
+  position: sticky;
+  top: 20px;
+  justify-self: end;
+}
+
+.content-side-by-side .content-side-figure img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+/* ============================================
+   Rules Page Styles
+   ============================================ */
+/* Универсальный блок с широкой иллюстрацией внутри карточки/секции */
+.rules-figure,
+.guide-figure,
+.guide-figure--full {
+  margin: 0 0 20px;
+  max-width: 100%;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.rules-figure img,
+.guide-figure img,
+.guide-figure--full img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+.rules-list {
+  margin: 0 0 0 18px;
+  font-size: 18px;
+}
+
+.rules-list li {
+  margin: 6px 0;
+}
+
+/* ============================================
+   Newspaper Page Styles
+   ============================================ */
+.page-body-newspaper {
+  background: var(--bg-newspaper);
+}
+
+.newspaper-intro {
+  max-width: 720px;
+  margin: 0 auto 20px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.newspaper-intro p {
+  margin: 12px 0;
+}
+
+.newspaper-grid {
+  padding-top: 20px;
+}
+
+.newspaper-card {
+  background: var(--card-newspaper);
+}
+
+.newspaper-image-card {
+  padding: 16px;
+}
+
+.newspaper-figure {
+  margin: 0;
+  text-align: center;
+}
+
+.newspaper-figure img {
+  max-width: 640px;
+  width: 100%;
+  height: auto;
+}
+
+.newspaper-list {
+  margin: 12px 0 0 20px;
+  font-size: 18px;
+}
+
+.newspaper-list li {
+  margin: 10px 0;
+}
+
+.newspaper-note {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+/* ============================================
+   Contest Page Styles
+   ============================================ */
+.page-body-contest {
+  background: var(--bg-contest);
+}
+
+.contest-intro {
+  max-width: 760px;
+  margin: 0 auto 20px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.contest-intro p {
+  margin: 12px 0;
+}
+
+.contest-nav {
+  margin: 16px 0 0 22px;
+}
+
+.contest-grid {
+  padding-top: 20px;
+}
+
+.contest-card {
+  background: var(--card-contest);
+}
+
+.contest-card-alt {
+  background: var(--card-contest-alt);
+}
+
+.contest-text p {
+  margin: 10px 0;
+}
+
+.contest-text ul {
+  margin: 6px 0 8px 20px;
+}
+
+.contest-years {
+  padding: 20px 0 80px;
+}
+
+.contest-year {
+  margin-bottom: 32px;
+}
+
+.contest-year h2 {
+  margin: 0 0 16px;
+}
+
+.contest-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.contest-item {
+  background: var(--card-contest);
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.contest-title {
+  font-weight: 700;
+}
+
+.contest-details {
+  margin: 10px 0 0 18px;
+}
+
+.contest-details li {
+  margin: 6px 0;
+}
+
+.contest-details a {
+  word-break: break-all;
+}
+
+/* ============================================
+   Q&A Page Styles
+   ============================================ */
+.page-body-qa {
+  background: var(--bg-qa);
+}
+
+.qa-preface {
+  padding: 30px 0 10px;
+}
+
+/* Более компактное оглавление (меньше вертикальных отступов) */
+.qa-preface.qa-preface--compact {
+  padding: 18px 0 6px;
+}
+
+/* Оглавление с картинкой сбоку: картинка слева, карточка справа */
+.qa-preface-with-image {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.qa-preface-figure {
+  margin: 0;
+}
+
+.qa-preface-figure img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+@media (max-width: 700px) {
+  .qa-preface-with-image {
+    grid-template-columns: 1fr;
+  }
+
+  .qa-preface-figure {
+    justify-self: center;
+  }
+
+  .qa-preface-figure img {
+    max-width: 320px;
+  }
+}
+
+.qa-preface-card {
+  background: var(--card-qa);
+  min-width: 0;
+}
+
+.qa-toc {
+  margin: 12px 0 0 22px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.qa-toc li {
+  min-width: 0;
+}
+
+.qa-grid {
+  padding: 20px 0 60px;
+}
+
+.qa-grid h2 {
+  margin: 0 0 24px;
+}
+
+.qa-card {
+  background: var(--card-qa);
+  border-radius: 18px;
+  padding: 20px 24px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  margin-bottom: 20px;
+}
+
+.qa-card h3 {
+  margin: 0 0 12px;
+}
+
+.qa-spoiler-warning {
+  margin: 32px 0 20px;
+  font-size: 1.1rem;
+  color: var(--text, #1e293b);
+}
+
+/* Внутренние карточки внутри карточки (универсальный паттерн, напр. раздел «Плюшки» на дачах) */
+.inner-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.inner-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06);
+  margin: 0;
+}
+
+.inner-card h4 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+}
+
+.inner-card h4 + p {
+  margin: 0;
+}
+
+.inner-card p + p,
+.inner-card .muted {
+  margin-top: 8px;
+}
+
+.qa-answer ul,
+.qa-answer ol {
+  margin: 6px 0 6px 20px;
+}
+
+.qa-answer li {
+  margin: 3px 0;
+}
+
+.qa-answer .sublist {
+  margin-top: 5px;
+  margin-left: 12px;
+  padding-left: 0.75em;
+}
+
+.qa-figure {
+  margin: 16px 0 20px;
+}
+
+.qa-final-figure {
+  margin: 24px 0 0;
+  text-align: center;
+}
+
+.qa-figure img,
+.qa-final-figure img {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+/* Картинка на всю доступную ширину блока (без ограничения 720px), но не шире секции */
+.qa-figure.qa-figure--full,
+.qa-final-figure.qa-figure--full {
+  max-width: 100%;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.qa-figure.qa-figure--full img,
+.qa-final-figure.qa-figure--full img {
+  max-width: 100%;
+}
+
+.qa-caption {
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Плотный подблок в одной карточке (меньше «воздуха») */
+.qa-subsection--dense {
+  background: var(--card-qa);
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 16px;
+}
+
+.qa-subsection--dense .qa-answer-side-figure {
+  gap: 20px;
+}
+
+.qa-subsection--dense .qa-answer-side-figure + .qa-answer-side-figure {
+  margin-top: 24px;
+}
+
+.qa-subsection--dense .qa-answer-side-text p {
+  margin-bottom: 0.5em;
+}
+
+.qa-subsection--dense .qa-answer-side-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Две картинки справа от текста: в ряд на десктопе, под текстом на мобильных */
+.qa-figures-stack {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.qa-figures-stack .qa-figure {
+  margin: 0;
+}
+
+.qa-figures-stack .qa-figure img {
+  max-width: 180px;
+}
+
+@media (max-width: 700px) {
+  .qa-answer-side-figure--double {
+    grid-template-columns: 1fr;
+  }
+
+  .qa-answer-side-figure--double .qa-figures-stack {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .qa-answer-side-figure--double .qa-figures-stack .qa-figure img {
+    max-width: 220px;
+  }
+}
+
+/* Текст слева, маленькая картинка справа (например, блок Брюстер) */
+.qa-answer-side-figure {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: start;
+}
+
+.qa-answer-side-figure .qa-answer-side-text {
+  min-width: 0;
+}
+
+.qa-figure-side {
+  margin: 0;
+}
+
+.qa-figure-side img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+/* Боковая картинка «во весь рост»: крупнее, по высоте карточки (читаемее) */
+.qa-answer-side-figure--tall {
+  align-items: stretch;
+}
+
+.qa-answer-side-figure--tall .qa-figure-side {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.qa-answer-side-figure--tall .qa-figure-side img {
+  max-width: 340px;
+  width: auto;
+  flex: 1;
+  min-height: 200px;
+  object-fit: contain;
+}
+
+/* Текст до картинки, картинка справа по размеру (без пустого места) */
+.qa-answer-side-figure--wide-figure {
+  grid-template-columns: 1fr auto;
+}
+
+.qa-answer-side-figure--wide-figure .qa-figure-side img {
+  max-width: 420px;
+}
+
+/* Галерея сбоку чуть шире (для кейсов, где картинка может занимать до половины карточки) */
+.qa-answer-side-figure--wide-figure .gallery-container {
+  max-width: 480px;
+}
+
+/* Очень широкая боковая картинка (для таблиц/скринов с текстом) */
+.qa-answer-side-figure--wide-figure-xxl .qa-figure-side img {
+  max-width: 560px;
+}
+
+/* Вариант, где галерея важнее текста: даём ей больше ширины */
+.qa-answer-side-figure--gallery-dominant {
+  grid-template-columns: 4fr 2fr;
+}
+
+.qa-answer-side-figure--gallery-dominant .gallery-container {
+  max-width: 720px;
+}
+
+/* Картинка в 2 раза уже (аналог gallery-container--compact) */
+.qa-figure.qa-figure--compact img,
+.qa-figure-side.qa-figure--compact img {
+  max-width: 360px;
+}
+.qa-figure-side.qa-figure--compact img {
+  max-width: 110px;
+}
+
+/* Картинка в 3 раза уже (ещё компактнее) */
+.qa-figure.qa-figure--compact-sm img,
+.qa-figure-side.qa-figure--compact-sm img {
+  max-width: 240px;
+}
+.qa-figure-side.qa-figure--compact-sm img {
+  max-width: 73px;
+}
+
+/* Несколько картинок в ряд (например, виды островов) */
+.qa-figures-row {
+  display: grid;
+  gap: 16px;
+  margin: 16px 0 0;
+}
+
+.qa-figures-row.qa-figures-row-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.qa-figures-row.qa-figures-row-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.qa-figures-row.qa-figures-row-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Ряд из 4 картинок: картинки в 2 раза меньше (компактный вид) */
+.qa-figures-row.qa-figures-row-4.qa-figures-row--compact .qa-figure img {
+  height: auto;
+  max-height: 130px;
+}
+
+.qa-figures-row .qa-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.qa-figures-row .qa-figure img {
+  width: 100%;
+  max-width: 100%;
+  height: 260px;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+/* Большая высота картинок в ряду (без обрезки, только выше лимит) */
+.qa-figures-row.qa-figures-row--taller .qa-figure img {
+  height: auto;
+  max-height: 380px;
+}
+
+/* Сдвиг картинки: показывать левую часть, правую обрезать (object-position) */
+.qa-figure--align-left {
+  overflow: hidden;
+}
+.qa-figure--align-left img {
+  object-fit: cover;
+  object-position: left center;
+}
+
+/* Сдвиг вправо: показывать правую часть, левую обрезать */
+.qa-figure--align-right {
+  overflow: hidden;
+}
+.qa-figure--align-right img {
+  object-fit: cover;
+  object-position: right center;
+}
+
+/* Лёгкий сдвиг влево (почти по центру, чуть влево) */
+.qa-figure--shift-left {
+  overflow: hidden;
+}
+.qa-figure--shift-left img {
+  object-fit: cover;
+  object-position: 35% center;
+}
+
+/* Лёгкий сдвиг вправо (почти по центру, чуть вправо) */
+.qa-figure--shift-right {
+  overflow: hidden;
+}
+.qa-figure--shift-right img {
+  object-fit: cover;
+  object-position: 65% center;
+}
+
+/* Ряд с картинками на всю ширину колонки, без «воздуха» вокруг */
+.qa-figures-row.qa-figures-row--large .qa-figure img {
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Ряд без фиксированной высоты — картинки по своей высоте (одинаковые скрины) */
+.qa-figures-row.qa-figures-row--tight .qa-figure img {
+  height: auto;
+  max-height: 260px;
+}
+
+/* Ряд с высокими картинками (схемы, диаграммы) — для детального просмотра */
+.qa-figures-row.qa-figures-row--tall .qa-figure img {
+  height: auto;
+  max-height: 560px;
+}
+
+/* Ряд с увеличенными картинками, но с ограничением по высоте (Pocket Camp и подобное).
+   Единая высота ряда: обе картинки заполняют одну и ту же высоту, низкая масштабируется вверх и обрезается по ширине. */
+.qa-figures-row.qa-figures-row--medium .qa-figure {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.qa-figures-row.qa-figures-row--medium .qa-figure img {
+  height: 380px;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Ряд с кликабельными картинками (открытие в полном размере) */
+.qa-figure-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.qa-figure-link:hover {
+  opacity: 0.95;
+}
+
+.qa-figure-link .qa-figure {
+  margin: 0;
+}
+
+.qa-figure-link:hover .qa-figure img {
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.18);
+}
+
+.qa-figure-expand-hint {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+  text-align: center;
+}
+
+/* Картинка по центру (чек-листы и т.п.) */
+.qa-figure-link--center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.qa-figure-link--center .qa-figure {
+  max-width: 100%;
+}
+.qa-figure-link--center .qa-figure img {
+  width: auto;
+  max-width: 100%;
+}
+
+/* Первая колонка уже, вторая шире (только для ряда из 2 картинок) */
+.qa-figures-row.qa-figures-row-2.qa-figures-row-narrow-first {
+  grid-template-columns: 2fr 3fr;
+}
+
+/* ============================================
+   Terminology Page Styles
+   ============================================ */
+.term-list {
+  display: grid;
+  gap: 24px;
+  padding: 30px 0 60px;
+}
+
+.term-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 24px;
+  align-items: center;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.term-card:nth-child(even) {
+  background: #f8fafc;
+}
+
+.term-card img {
+  width: 100%;
+  height: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.term-card h2 {
+  margin-top: 0;
+}
+
+.term-card ul {
+  margin: 6px 0 0 20px;
+}
+
+/* ============================================
+   Универсальные карточки и сетки
+   ============================================ */
+/* Модификаторы для карточек */
+.card-mb,
+.section-card-mb,
+.split-card-mb {
+  margin-bottom: 40px;
+}
+
+/* Сетка для списка «широких» карточек (гости, персонажи, типы островов и т.п.) */
+.split-card-list,
+.items-grid,
+.star-shards-grid {
+  display: grid;
+  gap: 24px;
+  padding: 30px 0 60px;
+}
+
+/* Широкая карточка: текст слева, изображение справа */
+.split-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.split-card:nth-child(even) {
+  background: #f8fafc;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+}
+
+.split-card:nth-child(even) img {
+  order: -1;
+}
+
+.split-card img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 14px;
+}
+
+.guest-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.split-card h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.split-card-subtitle {
+  font-size: 16px;
+  color: var(--muted);
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+.guest-description {
+  margin: 0;
+}
+
+.guest-description p {
+  margin: 0 0 12px;
+}
+
+.guest-description p:last-child {
+  margin-bottom: 0;
+}
+
+/* Дополнительный текст под карточкой (на всю ширину карточки) */
+.card-extra {
+  margin-top: 0;
+}
+
+.split-card .card-extra {
+  grid-column: 1 / -1;
+}
+
+/* Пошаговый гайд: карточки с номерами, картинка ~70%, текст сбоку. На мобилках — везде картинка сверху, текст снизу */
+.guide-step-list {
+  counter-reset: step;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.guide-step {
+  counter-increment: step;
+  position: relative;
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  gap: 24px;
+  align-items: start;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.guide-step__number {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  z-index: 1;
+}
+
+.guide-step__number::before {
+  content: counter(step);
+}
+
+.guide-step__figure {
+  margin: 0;
+}
+
+.guide-step__figure img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 14px;
+}
+
+.guide-step__text {
+  min-width: 0;
+}
+
+.guide-step__text p {
+  margin: 0;
+}
+
+.card-extra p {
+  margin: 0 0 12px;
+}
+
+.card-extra p:last-child {
+  margin-bottom: 0;
+}
+
+/* Сетка для карточек предметов (осколки звезд и т.д.) */
+.items-row-2,
+.star-shards-row-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.items-row-3,
+.star-shards-row-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Компактная сетка предметов (меньше вертикальных отступов) */
+.items-grid.items-grid--compact {
+  padding: 20px 0 40px;
+  gap: 16px;
+}
+
+.items-row-1,
+.star-shards-row-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Карточка предмета (изображение по центру, текст под ним) */
+.item-card,
+.star-shard-item {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.item-card img,
+.star-shard-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.item-card h3,
+.star-shard-item h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.item-card p,
+.star-shard-item p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Списки в карточках — по левому краю, остальное по центру */
+.item-card > div,
+.star-shard-item > div {
+  width: 100%;
+  min-width: 0;
+}
+.item-card ul,
+.item-card ol,
+.star-shard-item ul,
+.star-shard-item ol {
+  text-align: left;
+  margin: 4px 0 0;
+  padding-left: 20px;
+}
+.item-card li,
+.star-shard-item li {
+  margin: 2px 0;
+}
+
+/* Сквозная нумерация карточек: только внутри обёртки .items-grids-numbered и при классе .items-grid--numbered */
+.items-grids-numbered {
+  counter-reset: item-card;
+}
+.items-grids-numbered .items-grid--numbered .item-card {
+  counter-increment: item-card;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px 16px;
+  align-items: start;
+  text-align: left;
+}
+.items-grids-numbered .items-grid--numbered .item-card::before {
+  content: counter(item-card);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text, #1e293b);
+}
+.items-grids-numbered .items-grid--numbered .item-card > div {
+  text-align: center;
+  min-width: 0;
+}
+
+/* Сетка для страницы с чек-листами */
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding-top: 8px;
+}
+
+.checklist-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.checklist-card__icon {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.checklist-card__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.checklist-card__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checklist-card__title {
+  font-size: 18px;
+  margin: 0;
+}
+
+.checklist-card__subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.button-small {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+/* Универсальная галерея (можно использовать на любой странице) */
+.image-gallery,
+.diy-gallery {
+  padding: 30px 0 60px;
+}
+
+.image-gallery h2,
+.diy-gallery h2 {
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+.gallery-container,
+.diy-gallery-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Узкая галерея: картинки в 2 раза меньше (только где добавлен класс) */
+.gallery-container.gallery-container--compact {
+  max-width: 400px;
+}
+
+/* Галерея сбоку от текста (в qa-answer-side-figure) */
+.qa-answer-side-figure .gallery-container,
+.content-side-by-side .gallery-container {
+  margin: 0;
+  max-width: 360px;
+  flex-shrink: 0;
+}
+
+/* Галерея слева, текст справа */
+.qa-answer-side-figure--gallery-left {
+  grid-template-columns: auto 1fr;
+}
+
+.qa-answer-side-figure--gallery-left .qa-answer-side-text {
+  order: 2;
+}
+
+.qa-answer-side-figure--gallery-left .gallery-container {
+  order: 1;
+}
+
+.gallery-slide,
+.diy-gallery-slide {
+  display: none;
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.gallery-slide.active,
+.diy-gallery-slide.active {
+  display: block;
+}
+
+.gallery-slide img,
+.diy-gallery-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+
+.gallery-slide h3,
+.diy-gallery-slide h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.gallery-nav,
+.diy-gallery-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.gallery-btn,
+.diy-gallery-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.gallery-btn:hover,
+.diy-gallery-btn:hover {
+  background: var(--accent-dark);
+}
+
+.gallery-btn:disabled,
+.diy-gallery-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.gallery-dots,
+.diy-gallery-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.gallery-dot,
+.diy-gallery-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d1d5db;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.gallery-dot.active,
+.diy-gallery-dot.active {
+  background: var(--accent);
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.site-footer {
+  background: #111;
+  color: #e5e7eb;
+  padding: 30px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links a {
+  color: #e5e7eb;
+}
+
+.muted {
+  color: #9ca3af;
+}
+
+/* ============================================
+   Support Page Styles
+   ============================================ */
+.support-donate-block {
+  text-align: center;
+  padding: 24px 0;
+  border-top: 2px solid var(--border);
+  margin-top: 32px;
+}
+
+.support-donate-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.support-donate-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.support-donate-hint {
+  font-style: italic;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.support-donate-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--accent);
+  color: #fff !important;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  transition: background 0.2s ease;
+}
+
+.support-donate-btn:hover,
+.support-donate-btn:focus {
+  background: var(--accent-dark);
+  border-bottom: none;
+}
+
+.support-donate-note {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.support-donate-note a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .support-donate-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 800px) {
+  /* Уменьшаем отступы контейнера */
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Hero секции */
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero-compact {
+    padding: 60px 0 30px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero-compact h1 {
+    font-size: 24px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+  }
+
+  .lead {
+    font-size: 18px;
+  }
+
+  /* Карточки */
+  .section-card {
+    padding: 20px;
+  }
+
+  .section-card h2 {
+    font-size: 20px;
+  }
+
+  .term-card {
+    grid-template-columns: 1fr;
+  }
+
+  .split-card,
+  .split-card:nth-child(even) {
+    grid-template-columns: 1fr !important;
+  }
+
+  .split-card {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .split-card img {
+    order: -1;
+    max-height: 250px;
+  }
+
+  .guide-step {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .guide-step__figure {
+    order: -1;
+  }
+
+  .guide-step__figure img {
+    max-height: 280px;
+  }
+
+  .split-card h2 {
+    font-size: 24px;
+  }
+
+  .content-side-by-side {
+    grid-template-columns: 1fr;
+  }
+
+  .content-side-by-side .content-side-figure {
+    position: static;
+  }
+
+  .content-side-by-side .content-side-figure img {
+    max-width: 100%;
+  }
+
+  /* Сетки для карточек песен и предметов */
+  .items-row-3,
+  .star-shards-row-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .items-row-2,
+  .star-shards-row-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .items-row-1,
+  .star-shards-row-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .split-card-list,
+  .items-grid,
+  .star-shards-grid {
+    gap: 20px;
+    padding: 24px 0 40px;
+  }
+
+  /* Карточки предметов */
+  .item-card,
+  .star-shard-item {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .item-card img,
+  .star-shard-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .item-card h3,
+  .star-shard-item h3 {
+    font-size: 16px;
+  }
+
+  /* Заголовки секций */
+  .section-grid {
+    padding: 30px 0 40px;
+  }
+
+  /* Q&A карточки */
+  .qa-card {
+    padding: 16px 20px;
+  }
+
+  .qa-answer-side-figure {
+    grid-template-columns: 1fr;
+  }
+
+  /* На мобилке: текст сверху, галерея снизу */
+  .qa-answer-side-figure--gallery-left .qa-answer-side-text {
+    order: 1;
+  }
+
+  .qa-answer-side-figure--gallery-left .gallery-container {
+    order: 2;
+    max-width: 100%;
+  }
+
+  /* Картинки в боковых блоках — на всю ширину колонки на мобилке */
+  .qa-answer-side-figure--tall .qa-figure-side img {
+    max-width: 100%;
+    width: 100%;
+    min-height: 0;
+  }
+
+  .qa-figures-row.qa-figures-row-2,
+  .qa-figures-row.qa-figures-row-3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ряд из 4: на мобилке по 2 в ряд */
+  .qa-figures-row.qa-figures-row-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .qa-figures-row.qa-figures-row-4.qa-figures-row--compact .qa-figure img {
+    max-height: 160px;
+  }
+
+  /* Header */
+  .header-content {
+    padding: 12px 0;
+  }
+
+  .brand-title {
+    font-size: 16px;
+  }
+
+  .brand-subtitle {
+    font-size: 11px;
+  }
+
+  .nav {
+    gap: 10px;
+  }
+
+  .nav a {
+    font-size: 13px;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 24px 0;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+/* Очень маленькие экраны (до 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .hero {
+    padding: 50px 0;
+  }
+
+  .hero-compact {
+    padding: 50px 0 24px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero-compact h1 {
+    font-size: 22px;
+  }
+
+  /* Сетки становятся одноколоночными */
+  .items-row-3,
+  .star-shards-row-3,
+  .items-row-2,
+  .star-shards-row-2 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Карточки */
+  .section-card {
+    padding: 16px;
+  }
+
+  .split-card {
+    padding: 16px;
+  }
+
+  .split-card h2 {
+    font-size: 20px;
+  }
+
+  /* Уменьшаем размеры изображений в карточках предметов */
+  .item-card img,
+  .star-shard-item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .item-card h3,
+  .star-shard-item h3 {
+    font-size: 14px;
+  }
+
+  /* Header на очень маленьких экранах */
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  /* Footer на очень маленьких экранах */
+  .site-footer {
+    padding: 20px 0;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Страница инструкции бота: увеличенные картинки (кроме блока «Информация о конкурсе») */
+.page-bot-guide #intro .qa-figure img {
+  max-height: 500px;
+}
+.page-bot-guide .qa-answer-side-figure .qa-figure-side img {
+  max-width: 360px;
+}
+.page-bot-guide #submit_work .qa-figure img {
+  height: auto;
+  max-height: 420px;
+}
