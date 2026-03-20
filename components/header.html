@@ -1,27 +1,35 @@
     <a class="skip-link" href="#content">К содержанию</a>
     <header class="site-header">
       <div class="container header-content">
-        <div class="brand">
+        <a href="/" class="brand" aria-label="ACNH Guides — на главную">
           <span class="brand-title">ACNH Guides</span>
           <span class="brand-subtitle">Animal Crossing New Horizons</span>
+        </a>
+        <div class="header-actions">
+          <nav class="nav nav-desktop" aria-label="Основная навигация">
+            <a href="/" class="header-home-link">Главная</a>
+            <a href="https://t.me/acnhchatru" target="_blank" rel="noopener">Чат в Telegram</a>
+            <a href="https://t.me/acnhtime" target="_blank" rel="noopener">Канал в Telegram</a>
+            <a href="https://vk.com/acnhtime" target="_blank" rel="noopener">Группа в ВК</a>
+          </nav>
+          <div class="header-buttons">
+            <button type="button" class="search-toggle" id="search-toggle" aria-label="Поиск по странице" title="Поиск по странице">
+              <span class="search-toggle-icon" aria-hidden="true">🔍</span>
+            </button>
+            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Переключить тёмную тему" title="Тёмная тема">
+              <span class="theme-toggle-icon" aria-hidden="true">☽</span>
+            </button>
+            <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Меню" aria-expanded="false" aria-controls="nav-mobile">
+              <span class="nav-toggle-icon" aria-hidden="true"></span>
+            </button>
+          </div>
         </div>
-        <nav class="nav">
-          <button type="button" class="search-toggle" id="search-toggle" aria-label="Поиск по странице" title="Поиск по странице">
-            <span class="search-toggle-icon" aria-hidden="true">🔍</span>
-          </button>
-          <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Переключить тёмную тему" title="Тёмная тема">
-            <span class="theme-toggle-icon" aria-hidden="true">☽</span>
-          </button>
-          <a href="/" id="header-home-link">Главная</a>
-          <a href="https://t.me/acnhchatru" target="_blank" rel="noopener"
-            >Чат в Telegram</a
-          >
-          <a href="https://t.me/acnhtime" target="_blank" rel="noopener"
-            >Канал в Telegram</a
-          >
-          <a href="https://vk.com/acnhtime" target="_blank" rel="noopener"
-            >Группа в ВК</a
-          >
-        </nav>
       </div>
+      <div class="nav-mobile-backdrop" id="nav-mobile-backdrop" aria-hidden="true"></div>
+      <nav class="nav nav-mobile" id="nav-mobile" aria-label="Мобильное меню" aria-hidden="true">
+        <a href="/" class="header-home-link">Главная</a>
+        <a href="https://t.me/acnhchatru" target="_blank" rel="noopener">Чат в Telegram</a>
+        <a href="https://t.me/acnhtime" target="_blank" rel="noopener">Канал в Telegram</a>
+        <a href="https://vk.com/acnhtime" target="_blank" rel="noopener">Группа в ВК</a>
+      </nav>
     </header>

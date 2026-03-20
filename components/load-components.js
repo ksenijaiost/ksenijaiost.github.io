@@ -46,9 +46,32 @@
         headerPlaceholder.outerHTML = html;
         // Устанавливаем aria-current для активной ссылки
         const currentPath = window.location.pathname;
-        const homeLink = document.getElementById('header-home-link');
-        if (homeLink && (currentPath === '/' || currentPath.endsWith('/index.html'))) {
-          homeLink.setAttribute('aria-current', 'page');
+        const isHome = currentPath === '/' || currentPath.endsWith('/index.html');
+        document.querySelectorAll('.header-home-link').forEach(function(link) {
+          if (isHome) link.setAttribute('aria-current', 'page');
+          else link.removeAttribute('aria-current');
+        });
+        // Мобильное меню
+        var navToggle = document.getElementById('nav-toggle');
+        var navMobile = document.getElementById('nav-mobile');
+        var navBackdrop = document.getElementById('nav-mobile-backdrop');
+        function closeMobileNav() {
+          navMobile.classList.remove('nav-mobile--open');
+          navToggle.setAttribute('aria-expanded', 'false');
+          navMobile.setAttribute('aria-hidden', 'true');
+          if (navBackdrop) navBackdrop.classList.remove('nav-mobile-backdrop--visible');
+        }
+        if (navToggle && navMobile) {
+          navToggle.addEventListener('click', function() {
+            var open = navMobile.classList.toggle('nav-mobile--open');
+            navToggle.setAttribute('aria-expanded', open);
+            navMobile.setAttribute('aria-hidden', !open);
+            if (navBackdrop) navBackdrop.classList.toggle('nav-mobile-backdrop--visible', open);
+          });
+          navMobile.querySelectorAll('a').forEach(function(a) {
+            a.addEventListener('click', closeMobileNav);
+          });
+          if (navBackdrop) navBackdrop.addEventListener('click', closeMobileNav);
         }
         // Инициализируем переключатель темы
         updateThemeToggleUI();
@@ -72,6 +95,11 @@
     })
     .catch(err => console.error('Ошибка загрузки шапки:', err));
   
+  // Хлебные крошки
+  var breadcrumbsScript = document.createElement('script');
+  breadcrumbsScript.src = componentsPath + 'breadcrumbs.js';
+  document.body.appendChild(breadcrumbsScript);
+
   // Загружаем подвал
   fetch('/components/footer.html')
     .then(response => response.text())
