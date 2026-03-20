@@ -272,7 +272,15 @@ a:focus {
   justify-content: space-between;
   gap: 16px;
   padding: 16px 0;
-  flex-wrap: wrap;
+}
+
+.brand {
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand:hover {
+  color: #fff;
 }
 
 .brand-title {
@@ -286,10 +294,21 @@ a:focus {
   display: block;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .nav {
   display: flex;
   gap: 14px;
-  flex-wrap: wrap;
 }
 
 .nav a {
@@ -302,6 +321,41 @@ a:focus {
 
 .nav a[aria-current="page"] {
   color: #cfeee0;
+}
+
+/* Мобильное меню — скрыто на десктопе */
+.nav-mobile,
+.nav-mobile-backdrop {
+  display: none;
+}
+
+/* Кнопка гамбургера */
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus {
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+.nav-toggle-icon {
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  box-shadow: 0 -6px 0 currentColor, 0 6px 0 currentColor;
 }
 
 .theme-toggle {
@@ -2018,8 +2072,16 @@ details.accordion[open] summary::after {
 .footer-content {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 16px;
   flex-wrap: wrap;
+}
+
+.footer-disclaimer {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #9ca3af;
+  max-width: 420px;
 }
 
 .footer-links {
@@ -2329,35 +2391,95 @@ details.accordion[open] summary::after {
     max-height: 160px;
   }
 
-  /* Header */
+  /* Header — компактная одна строка */
   .header-content {
-    padding: 12px 0;
+    padding: 10px 0;
+    flex-wrap: nowrap;
+  }
+
+  .brand-subtitle {
+    display: none;
   }
 
   .brand-title {
     font-size: 16px;
   }
 
-  .brand-subtitle {
-    font-size: 11px;
+  .nav-desktop {
+    display: none;
   }
 
-  .nav {
-    gap: 10px;
+  .nav-toggle {
+    display: flex;
   }
 
-  .nav a {
-    font-size: 13px;
+  .nav-mobile-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 9;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
   }
 
-  /* Footer */
+  .nav-mobile-backdrop--visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .search-toggle,
+  .theme-toggle {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .nav-mobile {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(12, 12, 12, 0.98);
+    padding: 12px 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.25s ease, opacity 0.2s;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-mobile--open {
+    max-height: 240px;
+    opacity: 1;
+  }
+
+  .nav-mobile a {
+    display: block;
+    padding: 10px 16px;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav-mobile a:last-child {
+    border-bottom: none;
+  }
+
+  /* Footer — компактный */
   .site-footer {
-    padding: 24px 0;
+    padding: 20px 0;
   }
 
   .footer-content {
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
+  }
+
+  .footer-disclaimer {
+    font-size: 11px;
+    line-height: 1.5;
   }
 
   .footer-links {
@@ -2423,26 +2545,17 @@ details.accordion[open] summary::after {
     font-size: 14px;
   }
 
-  /* Header на очень маленьких экранах */
-  .header-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .nav {
-    width: 100%;
-    justify-content: flex-start;
-  }
-
-  /* Footer на очень маленьких экранах */
+  /* Footer на очень маленьких экранах — ещё компактнее */
   .site-footer {
-    padding: 20px 0;
+    padding: 16px 0;
+  }
+
+  .footer-disclaimer {
+    font-size: 10px;
   }
 
   .footer-links {
-    flex-direction: column;
-    gap: 8px;
+    gap: 10px;
   }
 }
 
