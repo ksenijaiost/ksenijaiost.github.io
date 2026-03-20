@@ -108,6 +108,12 @@
       if (footerPlaceholder) {
         footerPlaceholder.outerHTML = html;
       }
+      // GoatCounter: скрипт из innerHTML не выполняется, подключаем вручную
+      var gc = document.createElement('script');
+      gc.setAttribute('data-goatcounter', 'https://animal-crossing.goatcounter.com/count');
+      gc.async = true;
+      gc.src = 'https://gc.zgo.at/count.js';
+      document.body.appendChild(gc);
     })
     .catch(err => console.error('Ошибка загрузки подвала:', err));
   
