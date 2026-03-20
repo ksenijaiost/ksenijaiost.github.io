@@ -95,6 +95,11 @@
     })
     .catch(err => console.error('Ошибка загрузки шапки:', err));
   
+  // Хлебные крошки
+  var breadcrumbsScript = document.createElement('script');
+  breadcrumbsScript.src = componentsPath + 'breadcrumbs.js';
+  document.body.appendChild(breadcrumbsScript);
+
   // Загружаем подвал
   fetch('/components/footer.html')
     .then(response => response.text())

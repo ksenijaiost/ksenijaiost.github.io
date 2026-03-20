@@ -700,6 +700,40 @@ mark.search-highlight-current {
   text-align: center;
   margin-top: 16px;
 }
+
+/* Хлебные крошки */
+.breadcrumbs {
+  padding: 12px 0;
+  font-size: 14px;
+  color: var(--muted);
+  background: var(--bg);
+}
+
+.breadcrumbs-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+}
+
+.breadcrumbs a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  color: var(--accent);
+}
+
+.breadcrumbs-sep {
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+.breadcrumbs-current {
+  color: var(--text);
+  font-weight: 500;
+}
  
 /* ============================================
    Buttons
